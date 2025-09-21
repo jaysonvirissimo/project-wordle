@@ -3,7 +3,7 @@ import React from 'react';
 function Banner({answer, gameOutcome, gameOver, guesses, resetGame}) {
 
   function Button() {
-    return <button onClick={resetGame}>Reset!</button>;
+    return <button onClick={resetGame} style={{marginLeft: '10px', padding: '4px 8px', cursor: 'pointer'}}>Reset Game</button>;
   }
 
   if (!gameOver) {
