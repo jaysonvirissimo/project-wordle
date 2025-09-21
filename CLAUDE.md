@@ -130,3 +130,4 @@ Each component folder contains:
 
 **Testing Requirements:**
 Always run the full test suite (`npm test`) before making changes to ensure no regressions in the 170+ existing tests covering all component behaviors, edge cases, and integration points.
+- Use comments sparingly and use Martin Fowler's advice from his Refactoring book as a default.
