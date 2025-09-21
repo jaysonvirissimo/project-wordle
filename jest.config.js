@@ -10,5 +10,13 @@ module.exports = {
     'src/**/*.{js,jsx}',
     '!src/index.js',
     '!src/**/*.test.js'
-  ]
+  ],
+  transform: {
+    '^.+\\.(js|jsx)$': ['babel-jest', {
+      presets: [
+        '@babel/preset-env',
+        ['@babel/preset-react', { runtime: 'automatic' }]
+      ]
+    }]
+  }
 };
