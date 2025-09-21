@@ -52,4 +52,14 @@ npm run build
    - **Yellow**: Correct letter in the wrong position
    - **Gray**: Letter not in the word
 4. You have 6 attempts to guess the correct word
-5. Click "Reset Game" to start over with a new word
+5. Click "Show Hint" to see the meaning and part of speech
+6. Diacritics are ignored (mōtum = motum)
+7. Click "Reset Game" to start over with a new word
+
+### Features
+
+- **801 Latin words** from medieval Latin dictionary
+- **Hint system** showing meanings and parts of speech
+- **Diacritic normalization** (ō = o, ā = a, etc.)
+- **All word types** (nouns, verbs, adjectives, etc.)
+- **Educational focus** perfect for Latin learners

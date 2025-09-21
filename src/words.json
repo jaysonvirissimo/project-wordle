@@ -1,0 +1,3074 @@
+{
+  "ILLUD": {
+    "original": "illud",
+    "meaning": "that",
+    "part": "Pronoun",
+    "pronunciation": "illud"
+  },
+  "OMNIS": {
+    "original": "omnis",
+    "meaning": "all, every, as a whole",
+    "part": "Adjective",
+    "pronunciation": "omnis"
+  },
+  "IPSUM": {
+    "original": "ipsum",
+    "meaning": "him- her- itself",
+    "part": "Pronoun",
+    "pronunciation": "ipsum"
+  },
+  "POSSE": {
+    "original": "posse",
+    "meaning": "be able",
+    "part": "Verb",
+    "pronunciation": "posse"
+  },
+  "POTUI": {
+    "original": "potui",
+    "meaning": "be able",
+    "part": "Verb",
+    "pronunciation": "potui"
+  },
+  "MAGNA": {
+    "original": "magna",
+    "meaning": "great",
+    "part": "Adjective",
+    "pronunciation": "maːgna"
+  },
+  "DATUM": {
+    "original": "datum",
+    "meaning": "give",
+    "part": "Verb",
+    "pronunciation": "datum"
+  },
+  "VIDEO": {
+    "original": "video",
+    "meaning": "see",
+    "part": "Verb",
+    "pronunciation": "vide.oː"
+  },
+  "VISUM": {
+    "original": "visum",
+    "meaning": "see",
+    "part": "Verb",
+    "pronunciation": "viːsum"
+  },
+  "FACIO": {
+    "original": "facio",
+    "meaning": "do, make",
+    "part": "Verb",
+    "pronunciation": "fatʃio"
+  },
+  "ATQUE": {
+    "original": "atque",
+    "meaning": "and in addition, and also, and; (after comparatives) than; simul atque, as soon as",
+    "part": "Conjunction",
+    "pronunciation": "atkwe"
+  },
+  "ALIUS": {
+    "original": "alius",
+    "meaning": "other, another; ālias: at another time",
+    "part": "Adjective",
+    "pronunciation": "aljus"
+  },
+  "ALIUD": {
+    "original": "aliud",
+    "meaning": "other, another; ālias: at another time",
+    "part": "Adjective",
+    "pronunciation": "aljud"
+  },
+  "HABEO": {
+    "original": "habeo",
+    "meaning": "have, hold",
+    "part": "Verb",
+    "pronunciation": "habeo"
+  },
+  "HABUI": {
+    "original": "habui",
+    "meaning": "have, hold",
+    "part": "Verb",
+    "pronunciation": "habui"
+  },
+  "MULTA": {
+    "original": "multa",
+    "meaning": "much, many; multō, by far",
+    "part": "Adjective",
+    "pronunciation": "multa"
+  },
+  "FERRE": {
+    "original": "ferre",
+    "meaning": "bear, carry, endure",
+    "part": "Verb",
+    "pronunciation": "ferre"
+  },
+  "LATUM": {
+    "original": "latum",
+    "meaning": "bear, carry, endure",
+    "part": "Verb",
+    "pronunciation": "laːtum"
+  },
+  "MANUS": {
+    "original": "manus",
+    "meaning": "hand; band of men",
+    "part": "Noun",
+    "pronunciation": "manus"
+  },
+  "NULLA": {
+    "original": "nūllā",
+    "meaning": "no one",
+    "part": "Pronoun",
+    "pronunciation": "nullaː"
+  },
+  "NOBIS": {
+    "original": "nobis",
+    "meaning": "we",
+    "part": "Pronoun",
+    "pronunciation": "nobis"
+  },
+  "NIHIL": {
+    "original": "nihil",
+    "meaning": "nothing; not at all",
+    "part": "Noun",
+    "pronunciation": "nihil"
+  },
+  "TAMEN": {
+    "original": "tamen",
+    "meaning": "nevertheless, still",
+    "part": "Conjunction",
+    "pronunciation": "tamen"
+  },
+  "EADEM": {
+    "original": "eadem",
+    "meaning": "the same",
+    "part": "Pronoun",
+    "pronunciation": "eadem"
+  },
+  "LOCUS": {
+    "original": "locus",
+    "meaning": "place; region",
+    "part": "Noun",
+    "pronunciation": "lokus"
+  },
+  "VENIO": {
+    "original": "venio",
+    "meaning": "come",
+    "part": "Verb",
+    "pronunciation": "venio"
+  },
+  "INTER": {
+    "original": "inter",
+    "meaning": "between, among; during",
+    "part": "Preposition",
+    "pronunciation": "inter"
+  },
+  "VELLE": {
+    "original": "velle",
+    "meaning": "wish, be willing",
+    "part": "Verb",
+    "pronunciation": "velle"
+  },
+  "VOLUI": {
+    "original": "volui",
+    "meaning": "wish, be willing",
+    "part": "Verb",
+    "pronunciation": "volui"
+  },
+  "ETIAM": {
+    "original": "etiam",
+    "meaning": "also, even",
+    "part": "Adverb",
+    "pronunciation": "etjam"
+  },
+  "BONUS": {
+    "original": "bonus",
+    "meaning": "good",
+    "part": "Adjective",
+    "pronunciation": "bonus"
+  },
+  "BONUM": {
+    "original": "bonum",
+    "meaning": "good",
+    "part": "Adjective",
+    "pronunciation": "bonum"
+  },
+  "AGERE": {
+    "original": "agere",
+    "meaning": "drive, do, act",
+    "part": "Verb",
+    "pronunciation": "aɡere"
+  },
+  "ACTUM": {
+    "original": "actum",
+    "meaning": "drive, do, act",
+    "part": "Verb",
+    "pronunciation": "aktum"
+  },
+  "TERRA": {
+    "original": "terra",
+    "meaning": "land",
+    "part": "Noun",
+    "pronunciation": "terra"
+  },
+  "PATER": {
+    "original": "pater",
+    "meaning": "father, ancestor",
+    "part": "Noun",
+    "pronunciation": "pah-tare"
+  },
+  "NEQUE": {
+    "original": "neque",
+    "meaning": "and not, nor",
+    "part": "Conjunction",
+    "pronunciation": "nekwe"
+  },
+  "DOMUS": {
+    "original": "domus",
+    "meaning": "house, home",
+    "part": "Noun",
+    "pronunciation": "domus"
+  },
+  "TOTUS": {
+    "original": "totus",
+    "meaning": "whole, entire",
+    "part": "Adjective",
+    "pronunciation": "toːtus"
+  },
+  "TOTUM": {
+    "original": "totum",
+    "meaning": "whole, entire",
+    "part": "Adjective",
+    "pronunciation": "toːtum"
+  },
+  "ISTUD": {
+    "original": "istud",
+    "meaning": "that, that of yours",
+    "part": "Pronoun",
+    "pronunciation": "istud"
+  },
+  "IUBEO": {
+    "original": "iubeo",
+    "meaning": "bid, order",
+    "part": "Verb",
+    "pronunciation": "jubeoː"
+  },
+  "IUSSI": {
+    "original": "iussi",
+    "meaning": "bid, order",
+    "part": "Verb",
+    "pronunciation": "jussiː"
+  },
+  "MAGIS": {
+    "original": "magis",
+    "meaning": "more",
+    "part": "Adverb",
+    "pronunciation": "maɡis"
+  },
+  "PRIMA": {
+    "original": "prima",
+    "meaning": "first",
+    "part": "Adjective",
+    "pronunciation": "priːma"
+  },
+  "TENEO": {
+    "original": "teneo",
+    "meaning": "hold, keep",
+    "part": "Verb",
+    "pronunciation": "teneoː"
+  },
+  "CAUSA": {
+    "original": "causa",
+    "meaning": "cause, reason",
+    "part": "Noun",
+    "pronunciation": "kauza"
+  },
+  "CREDO": {
+    "original": "credo",
+    "meaning": "believe",
+    "part": "Verb",
+    "pronunciation": "kredoː"
+  },
+  "MITTO": {
+    "original": "mitto",
+    "meaning": "send, let go",
+    "part": "Verb",
+    "pronunciation": "mitto"
+  },
+  "AUTEM": {
+    "original": "autem",
+    "meaning": "moreover, but, however",
+    "part": "Conjunction",
+    "pronunciation": "autɛm"
+  },
+  "CAPUT": {
+    "original": "caput",
+    "meaning": "head",
+    "part": "Noun",
+    "pronunciation": "kaput"
+  },
+  "MATER": {
+    "original": "mater",
+    "meaning": "mother",
+    "part": "Noun",
+    "pronunciation": "mah-tare"
+  },
+  "CAPIO": {
+    "original": "capio",
+    "meaning": "seize",
+    "part": "Verb",
+    "pronunciation": "kapio"
+  },
+  "NOMEN": {
+    "original": "nomen",
+    "meaning": "name",
+    "part": "Noun",
+    "pronunciation": "nomen"
+  },
+  "MISER": {
+    "original": "miser",
+    "meaning": "wretched, pitiable",
+    "part": "Adjective",
+    "pronunciation": "miser"
+  },
+  "NOVUS": {
+    "original": "novus",
+    "meaning": "new",
+    "part": "Adjective",
+    "pronunciation": "novus"
+  },
+  "NOVUM": {
+    "original": "novum",
+    "meaning": "new",
+    "part": "Adjective",
+    "pronunciation": "novum"
+  },
+  "GRAVE": {
+    "original": "grave",
+    "meaning": "heavy, serious",
+    "part": "Adjective",
+    "pronunciation": "grɑve"
+  },
+  "LONGA": {
+    "original": "longa",
+    "meaning": "long, far",
+    "part": "Adjective",
+    "pronunciation": "longa"
+  },
+  "PARVA": {
+    "original": "parva",
+    "meaning": "small",
+    "part": "Adjective",
+    "pronunciation": "parva"
+  },
+  "SAEPE": {
+    "original": "saepe",
+    "meaning": "often",
+    "part": "Adverb",
+    "pronunciation": "sɛpɛ"
+  },
+  "FIERI": {
+    "original": "fieri",
+    "meaning": "become, happen, be done",
+    "part": "Verb",
+    "pronunciation": "fiɛriː"
+  },
+  "ALTER": {
+    "original": "alter",
+    "meaning": "other of two",
+    "part": "Adjective",
+    "pronunciation": "alter"
+  },
+  "IGNIS": {
+    "original": "ignis",
+    "meaning": "fire",
+    "part": "Noun",
+    "pronunciation": "iɲis"
+  },
+  "TIMEO": {
+    "original": "timeo",
+    "meaning": "to fear, to dread",
+    "part": "Verb",
+    "pronunciation": "teemayo"
+  },
+  "DEBEO": {
+    "original": "debeo",
+    "meaning": "owe, be obliged",
+    "part": "Verb",
+    "pronunciation": "dɛbɛo"
+  },
+  "DEBUI": {
+    "original": "debui",
+    "meaning": "owe, be obliged",
+    "part": "Verb",
+    "pronunciation": "dɛbuiː"
+  },
+  "FATUM": {
+    "original": "fatum",
+    "meaning": "fate; death",
+    "part": "Noun",
+    "pronunciation": "fatum"
+  },
+  "ALTUS": {
+    "original": "altus",
+    "meaning": "high, lofty; deep",
+    "part": "Adjective",
+    "pronunciation": "altus"
+  },
+  "ALTUM": {
+    "original": "altum",
+    "meaning": "high, lofty; deep",
+    "part": "Adjective",
+    "pronunciation": "altum"
+  },
+  "MILES": {
+    "original": "miles",
+    "meaning": "soldier",
+    "part": "Noun",
+    "pronunciation": "miːles"
+  },
+  "MEDIA": {
+    "original": "media",
+    "meaning": "middle, central",
+    "part": "Adjective",
+    "pronunciation": "media"
+  },
+  "AUDIO": {
+    "original": "audio",
+    "meaning": "hear, listen to",
+    "part": "Verb",
+    "pronunciation": "audjoː"
+  },
+  "AUDII": {
+    "original": "audii",
+    "meaning": "hear, listen to",
+    "part": "Verb",
+    "pronunciation": "audiː"
+  },
+  "ANNUS": {
+    "original": "annus",
+    "meaning": "year",
+    "part": "Noun",
+    "pronunciation": "annus"
+  },
+  "STARE": {
+    "original": "stare",
+    "meaning": "stand",
+    "part": "Verb",
+    "pronunciation": "stareː"
+  },
+  "STETI": {
+    "original": "steti",
+    "meaning": "stand",
+    "part": "Verb",
+    "pronunciation": "stetiː"
+  },
+  "VOCIS": {
+    "original": "vocis",
+    "meaning": "voice, utterance",
+    "part": "Noun",
+    "pronunciation": "voːkis"
+  },
+  "GENUS": {
+    "original": "genus",
+    "meaning": "origin, lineage, kind",
+    "part": "Noun",
+    "pronunciation": "ʤɛnus"
+  },
+  "SCIRE": {
+    "original": "scire",
+    "meaning": "know",
+    "part": "Verb",
+    "pronunciation": "scire"
+  },
+  "SCIVI": {
+    "original": "scivi",
+    "meaning": "know",
+    "part": "Verb",
+    "pronunciation": "skiviː"
+  },
+  "REDDO": {
+    "original": "reddo",
+    "meaning": "return, give back",
+    "part": "Verb",
+    "pronunciation": "reddoː"
+  },
+  "LICET": {
+    "original": "licet",
+    "meaning": "it is permitted",
+    "part": "Verb",
+    "pronunciation": "likɛt"
+  },
+  "SOLUS": {
+    "original": "solus",
+    "meaning": "only, alone",
+    "part": "Adjective",
+    "pronunciation": "solusː"
+  },
+  "SOLUM": {
+    "original": "solum",
+    "meaning": "only, alone",
+    "part": "Adjective",
+    "pronunciation": "solomː"
+  },
+  "FUGIO": {
+    "original": "fugio",
+    "meaning": "flee, escape",
+    "part": "Verb",
+    "pronunciation": "fuɡjoː"
+  },
+  "ULLUS": {
+    "original": "ullus",
+    "meaning": "any, anyone",
+    "part": "Adjective",
+    "pronunciation": "ullusː"
+  },
+  "ULLUM": {
+    "original": "ullum",
+    "meaning": "any, anyone",
+    "part": "Adjective",
+    "pronunciation": "ullumː"
+  },
+  "NULLI": {
+    "original": "nulli",
+    "meaning": "no one",
+    "part": "Pronoun",
+    "pronunciation": "nulliː"
+  },
+  "NULLO": {
+    "original": "nullo",
+    "meaning": "no one",
+    "part": "Pronoun",
+    "pronunciation": "nulloː"
+  },
+  "MORIS": {
+    "original": "moris",
+    "meaning": "custom, habit",
+    "part": "Noun",
+    "pronunciation": "morɪs"
+  },
+  "FIDES": {
+    "original": "fides",
+    "meaning": "trust, faith",
+    "part": "Noun",
+    "pronunciation": "fɪdɛs"
+  },
+  "FIDEI": {
+    "original": "fidei",
+    "meaning": "trust, faith",
+    "part": "Noun",
+    "pronunciation": "fɪdeiː"
+  },
+  "CURAE": {
+    "original": "curae",
+    "meaning": "care, concern",
+    "part": "Noun",
+    "pronunciation": "kuraeː"
+  },
+  "VERBI": {
+    "original": "verbi",
+    "meaning": "word",
+    "part": "Noun",
+    "pronunciation": "vɛrbiiː"
+  },
+  "PROPE": {
+    "original": "prope",
+    "meaning": "near, next; nearly, almost",
+    "part": "Preposition",
+    "pronunciation": "prope"
+  },
+  "PUERI": {
+    "original": "pueri",
+    "meaning": "boy; slave",
+    "part": "Noun",
+    "pronunciation": "puɛriː"
+  },
+  "MOVEO": {
+    "original": "moveo",
+    "meaning": "move",
+    "part": "Verb",
+    "pronunciation": "mo-vey-oh"
+  },
+  "MOTUM": {
+    "original": "motum",
+    "meaning": "move",
+    "part": "Verb",
+    "pronunciation": "moːtum"
+  },
+  "DOLOR": {
+    "original": "dolor",
+    "meaning": "pain, grief",
+    "part": "Noun",
+    "pronunciation": "dolor"
+  },
+  "MODUS": {
+    "original": "modus",
+    "meaning": "measure, manner, kind",
+    "part": "Noun",
+    "pronunciation": "modus"
+  },
+  "AMICA": {
+    "original": "amica",
+    "meaning": "friendly; friend",
+    "part": "Adjective",
+    "pronunciation": "amiːka"
+  },
+  "PEDIS": {
+    "original": "pedis",
+    "meaning": "foot",
+    "part": "Noun",
+    "pronunciation": "pɛdɪs"
+  },
+  "LABOR": {
+    "original": "labor",
+    "meaning": "toil, exertion",
+    "part": "Noun",
+    "pronunciation": "labor"
+  },
+  "TALIS": {
+    "original": "talis",
+    "meaning": "such",
+    "part": "Adjective",
+    "pronunciation": "talɪs"
+  },
+  "PARUM": {
+    "original": "parum",
+    "meaning": "too little",
+    "part": "Adverb",
+    "pronunciation": "parum"
+  },
+  "CASUM": {
+    "original": "casum",
+    "meaning": "fall, be killed",
+    "part": "Verb",
+    "pronunciation": "kasumː"
+  },
+  "NATUS": {
+    "original": "natus",
+    "meaning": "son",
+    "part": "Noun",
+    "pronunciation": "natusː"
+  },
+  "TRAHO": {
+    "original": "traho",
+    "meaning": "drag, draw",
+    "part": "Verb",
+    "pronunciation": "traʰoː"
+  },
+  "TRAXI": {
+    "original": "traxi",
+    "meaning": "drag, draw",
+    "part": "Verb",
+    "pronunciation": "traksiː"
+  },
+  "METUS": {
+    "original": "metus",
+    "meaning": "fear, dread",
+    "part": "Noun",
+    "pronunciation": "metus"
+  },
+  "AMARE": {
+    "original": "amare",
+    "meaning": "to love",
+    "part": "Verb",
+    "pronunciation": "amareː"
+  },
+  "LEVIS": {
+    "original": "levis",
+    "meaning": "light, trivial",
+    "part": "Adjective",
+    "pronunciation": "levis"
+  },
+  "FERUS": {
+    "original": "ferus",
+    "meaning": "wild, fierce; fera -ae f.: wild animal",
+    "part": "Adjective",
+    "pronunciation": "ferus"
+  },
+  "FERUM": {
+    "original": "ferum",
+    "meaning": "wild, fierce; fera -ae f.: wild animal",
+    "part": "Adjective",
+    "pronunciation": "ferum"
+  },
+  "POENA": {
+    "original": "poena",
+    "meaning": "penalty, punishment",
+    "part": "Noun",
+    "pronunciation": "poena"
+  },
+  "MALUS": {
+    "original": "malus",
+    "meaning": "bad, evil",
+    "part": "Adjective",
+    "pronunciation": "malus"
+  },
+  "MALUM": {
+    "original": "malum",
+    "meaning": "bad, evil",
+    "part": "Adjective",
+    "pronunciation": "malum"
+  },
+  "IACEO": {
+    "original": "iaceo",
+    "meaning": "lie",
+    "part": "Verb",
+    "pronunciation": "jatʃeoː"
+  },
+  "IACUI": {
+    "original": "iacui",
+    "meaning": "lie",
+    "part": "Verb",
+    "pronunciation": "jatʃuiː"
+  },
+  "LIBER": {
+    "original": "liber",
+    "meaning": "book",
+    "part": "Noun",
+    "pronunciation": "liber"
+  },
+  "SILVA": {
+    "original": "silva",
+    "meaning": "forest, grove",
+    "part": "Noun",
+    "pronunciation": "silva"
+  },
+  "FINIS": {
+    "original": "finis",
+    "meaning": "end, boundary",
+    "part": "Noun",
+    "pronunciation": "finis"
+  },
+  "DUCIS": {
+    "original": "ducis",
+    "meaning": "leader, general",
+    "part": "Noun",
+    "pronunciation": "dukis"
+  },
+  "PREMO": {
+    "original": "premo",
+    "meaning": "press, pursue, overwhelm",
+    "part": "Verb",
+    "pronunciation": "prɛmoː"
+  },
+  "SAEVA": {
+    "original": "saeva",
+    "meaning": "fierce, raging, wrathful",
+    "part": "Adjective",
+    "pronunciation": "sɛva"
+  },
+  "LITUS": {
+    "original": "litus",
+    "meaning": "shore",
+    "part": "Noun",
+    "pronunciation": "litusː"
+  },
+  "SOLEO": {
+    "original": "soleo",
+    "meaning": "be accustomed",
+    "part": "Verb",
+    "pronunciation": "soleoː"
+  },
+  "MILLE": {
+    "original": "mille",
+    "meaning": "thousand",
+    "part": "Adjective",
+    "pronunciation": "milleː"
+  },
+  "MILIA": {
+    "original": "milia",
+    "meaning": "thousand",
+    "part": "Adjective",
+    "pronunciation": "miliaː"
+  },
+  "EQUUS": {
+    "original": "equus",
+    "meaning": "horse",
+    "part": "Noun",
+    "pronunciation": "ɛkʷus"
+  },
+  "DURUS": {
+    "original": "durus",
+    "meaning": "hard, tough, harsh",
+    "part": "Adjective",
+    "pronunciation": "durʊs"
+  },
+  "DURUM": {
+    "original": "durum",
+    "meaning": "hard, tough, harsh",
+    "part": "Adjective",
+    "pronunciation": "durʊm"
+  },
+  "TELUM": {
+    "original": "telum",
+    "meaning": "missile, weapon, spear",
+    "part": "Noun",
+    "pronunciation": "telumː"
+  },
+  "RATIO": {
+    "original": "ratio",
+    "meaning": "method, plan, reason",
+    "part": "Noun",
+    "pronunciation": "ratiːoː"
+  },
+  "UMBRA": {
+    "original": "umbra",
+    "meaning": "shade, shadow",
+    "part": "Noun",
+    "pronunciation": "umbra"
+  },
+  "ARTIS": {
+    "original": "artis",
+    "meaning": "skill",
+    "part": "Noun",
+    "pronunciation": "artɪs"
+  },
+  "SIGNI": {
+    "original": "signi",
+    "meaning": "sign, standard, mark",
+    "part": "Noun",
+    "pronunciation": "signiː"
+  },
+  "LAETA": {
+    "original": "laeta",
+    "meaning": "glad, joyful",
+    "part": "Adjective",
+    "pronunciation": "lɛta"
+  },
+  "LEGIS": {
+    "original": "legis",
+    "meaning": "law",
+    "part": "Noun",
+    "pronunciation": "lɛgɪs"
+  },
+  "PEREO": {
+    "original": "pereo",
+    "meaning": "perish, be lost",
+    "part": "Verb",
+    "pronunciation": "perɛoː"
+  },
+  "VENTI": {
+    "original": "venti",
+    "meaning": "wind",
+    "part": "Noun",
+    "pronunciation": "vɛntiː"
+  },
+  "AUDEO": {
+    "original": "audeo",
+    "meaning": "dare, be eager",
+    "part": "Verb",
+    "pronunciation": "audeoː"
+  },
+  "AUSUS": {
+    "original": "ausus",
+    "meaning": "dare, be eager",
+    "part": "Verb",
+    "pronunciation": "ausus"
+  },
+  "AQUAE": {
+    "original": "aquae",
+    "meaning": "water",
+    "part": "Noun",
+    "pronunciation": "akʷae"
+  },
+  "RAPIO": {
+    "original": "rapio",
+    "meaning": "seize, tear away",
+    "part": "Verb",
+    "pronunciation": "rapjoː"
+  },
+  "RAPUI": {
+    "original": "rapui",
+    "meaning": "seize, tear away",
+    "part": "Verb",
+    "pronunciation": "rapuiː"
+  },
+  "SIMUL": {
+    "original": "simul",
+    "meaning": "at the same time",
+    "part": "Adverb",
+    "pronunciation": "simul"
+  },
+  "MUNUS": {
+    "original": "munus",
+    "meaning": "gift, offering; duty, obligation; gladiatorial show",
+    "part": "Noun",
+    "pronunciation": "munusː"
+  },
+  "FAMAE": {
+    "original": "famae",
+    "meaning": "rumor, fame",
+    "part": "Noun",
+    "pronunciation": "famaeː"
+  },
+  "ADSUM": {
+    "original": "adsum",
+    "meaning": "be present",
+    "part": "Verb",
+    "pronunciation": "adsum"
+  },
+  "AFFUI": {
+    "original": "affui",
+    "meaning": "be present",
+    "part": "Verb",
+    "pronunciation": "affuiː"
+  },
+  "PARIS": {
+    "original": "paris",
+    "meaning": "equal",
+    "part": "Adjective",
+    "pronunciation": "parɪs"
+  },
+  "CERTA": {
+    "original": "certa",
+    "meaning": "sure, fixed",
+    "part": "Adjective",
+    "pronunciation": "tʃɛrta"
+  },
+  "EQUES": {
+    "original": "eques",
+    "meaning": "horseman, knight",
+    "part": "Noun",
+    "pronunciation": "ɛkwɛs"
+  },
+  "TRADO": {
+    "original": "trado",
+    "meaning": "hand over, yield",
+    "part": "Verb",
+    "pronunciation": "tradoː"
+  },
+  "LUCIS": {
+    "original": "lucis",
+    "meaning": "light of day",
+    "part": "Noun",
+    "pronunciation": "lukisː"
+  },
+  "REDEO": {
+    "original": "redeo",
+    "meaning": "go back, return",
+    "part": "Verb",
+    "pronunciation": "redeoː"
+  },
+  "REDII": {
+    "original": "redii",
+    "meaning": "go back, return",
+    "part": "Verb",
+    "pronunciation": "rediiː"
+  },
+  "SENSI": {
+    "original": "sensi",
+    "meaning": "perceive, feel, hear, see",
+    "part": "Verb",
+    "pronunciation": "sensiː"
+  },
+  "AURUM": {
+    "original": "aurum",
+    "meaning": "gold",
+    "part": "Noun",
+    "pronunciation": "aurum"
+  },
+  "SAXUM": {
+    "original": "saxum",
+    "meaning": "rock, cliff, crag",
+    "part": "Noun",
+    "pronunciation": "saxum"
+  },
+  "AETAS": {
+    "original": "aetas",
+    "meaning": "age, time of life",
+    "part": "Noun",
+    "pronunciation": "ɛtasː"
+  },
+  "FELIX": {
+    "original": "felix",
+    "meaning": "lucky",
+    "part": "Adjective",
+    "pronunciation": "feliks"
+  },
+  "LOQUI": {
+    "original": "loqui",
+    "meaning": "speak, talk",
+    "part": "Verb",
+    "pronunciation": "lokʷiː"
+  },
+  "COEPI": {
+    "original": "coepi",
+    "meaning": "begin",
+    "part": "Verb",
+    "pronunciation": "tʃoepiː"
+  },
+  "IURIS": {
+    "original": "iuris",
+    "meaning": "right, justice, law",
+    "part": "Noun",
+    "pronunciation": "jurisː"
+  },
+  "SOLIS": {
+    "original": "solis",
+    "meaning": "sun",
+    "part": "Noun",
+    "pronunciation": "solisː"
+  },
+  "ORBIS": {
+    "original": "orbis",
+    "meaning": "circle; orbis terrārum: world",
+    "part": "Noun",
+    "pronunciation": "orbis"
+  },
+  "TURBA": {
+    "original": "turba",
+    "meaning": "crowd, uproar",
+    "part": "Noun",
+    "pronunciation": "turba"
+  },
+  "SOLVO": {
+    "original": "solvo",
+    "meaning": "release, set sail",
+    "part": "Verb",
+    "pronunciation": "solvoː"
+  },
+  "SOLVI": {
+    "original": "solvi",
+    "meaning": "release, set sail",
+    "part": "Verb",
+    "pronunciation": "solviː"
+  },
+  "COPIA": {
+    "original": "copia",
+    "meaning": "abundance; (pl.) troops",
+    "part": "Noun",
+    "pronunciation": "kopiaː"
+  },
+  "COLUI": {
+    "original": "colui",
+    "meaning": "inhabit, cultivate",
+    "part": "Verb",
+    "pronunciation": "koluiː"
+  },
+  "VOTUM": {
+    "original": "votum",
+    "meaning": "solemn promise, vow; hope",
+    "part": "Noun",
+    "pronunciation": "votumː"
+  },
+  "IUGUM": {
+    "original": "iugum",
+    "meaning": "yoke; ridge, chain of hills",
+    "part": "Noun",
+    "pronunciation": "jugum"
+  },
+  "SATIS": {
+    "original": "satis",
+    "meaning": "enough, sufficient, sufficiently",
+    "part": "Adverb",
+    "pronunciation": "satis"
+  },
+  "CASUS": {
+    "original": "cāsūs",
+    "meaning": "a fall; chance, accident",
+    "part": "Noun",
+    "pronunciation": "kasusː"
+  },
+  "FREGI": {
+    "original": "fregi",
+    "meaning": "break, shatter",
+    "part": "Verb",
+    "pronunciation": "freɡiː"
+  },
+  "NOSCO": {
+    "original": "nosco",
+    "meaning": "learn, know",
+    "part": "Verb",
+    "pronunciation": "noskoː"
+  },
+  "NOTUM": {
+    "original": "notum",
+    "meaning": "learn, know",
+    "part": "Verb",
+    "pronunciation": "notum"
+  },
+  "MUNDI": {
+    "original": "mundi",
+    "meaning": "world, universe, heavens",
+    "part": "Noun",
+    "pronunciation": "mundiː"
+  },
+  "NAVIS": {
+    "original": "nāvīs",
+    "meaning": "ship",
+    "part": "Noun",
+    "pronunciation": "naviːs"
+  },
+  "MANEO": {
+    "original": "maneo",
+    "meaning": "remain",
+    "part": "Verb",
+    "pronunciation": "maneoː"
+  },
+  "MANSI": {
+    "original": "mansi",
+    "meaning": "remain",
+    "part": "Verb",
+    "pronunciation": "mansiː"
+  },
+  "AGMEN": {
+    "original": "agmen",
+    "meaning": "line of march",
+    "part": "Noun",
+    "pronunciation": "agmenː"
+  },
+  "SIDUS": {
+    "original": "sidus",
+    "meaning": "star, constellation",
+    "part": "Noun",
+    "pronunciation": "sidusː"
+  },
+  "FUGAE": {
+    "original": "fugae",
+    "meaning": "flight, route",
+    "part": "Noun",
+    "pronunciation": "fugae"
+  },
+  "TUTUS": {
+    "original": "tutus",
+    "meaning": "safe, protected",
+    "part": "Adjective",
+    "pronunciation": "tutusː"
+  },
+  "TUTUM": {
+    "original": "tutum",
+    "meaning": "safe, protected",
+    "part": "Adjective",
+    "pronunciation": "tutumː"
+  },
+  "AURIS": {
+    "original": "auris",
+    "meaning": "ear",
+    "part": "Noun",
+    "pronunciation": "auris"
+  },
+  "TACEO": {
+    "original": "taceo",
+    "meaning": "be silent",
+    "part": "Verb",
+    "pronunciation": "tatʃeoː"
+  },
+  "TACUI": {
+    "original": "tacui",
+    "meaning": "be silent",
+    "part": "Verb",
+    "pronunciation": "tatʃuiː"
+  },
+  "LEGIO": {
+    "original": "legio",
+    "meaning": "legion",
+    "part": "Noun",
+    "pronunciation": "ledʒioː"
+  },
+  "SOCII": {
+    "original": "socii",
+    "meaning": "friendly, allied; partner, comrade",
+    "part": "Adjective",
+    "pronunciation": "sotʃii"
+  },
+  "LUMEN": {
+    "original": "lumen",
+    "meaning": "light",
+    "part": "Noun",
+    "pronunciation": "lumenː"
+  },
+  "ADHUC": {
+    "original": "adhuc",
+    "meaning": "thus far, to this point",
+    "part": "Adverb",
+    "pronunciation": "adhukː"
+  },
+  "LATUS": {
+    "original": "latus",
+    "meaning": "side, flank",
+    "part": "Noun",
+    "pronunciation": "latus"
+  },
+  "DULCE": {
+    "original": "dulce",
+    "meaning": "sweet",
+    "part": "Adjective",
+    "pronunciation": "dulke"
+  },
+  "TECTI": {
+    "original": "tecti",
+    "meaning": "roof; building, house",
+    "part": "Noun",
+    "pronunciation": "tektiː"
+  },
+  "PACIS": {
+    "original": "pacis",
+    "meaning": "peace",
+    "part": "Noun",
+    "pronunciation": "pakisː"
+  },
+  "IUTUM": {
+    "original": "iutum",
+    "meaning": "help, assist; please, delight",
+    "part": "Verb",
+    "pronunciation": "jutumː"
+  },
+  "CAMPI": {
+    "original": "campi",
+    "meaning": "plain, field",
+    "part": "Noun",
+    "pronunciation": "kampiː"
+  },
+  "DOCEO": {
+    "original": "doceo",
+    "meaning": "teach",
+    "part": "Verb",
+    "pronunciation": "dokɛoː"
+  },
+  "DOCUI": {
+    "original": "docui",
+    "meaning": "teach",
+    "part": "Verb",
+    "pronunciation": "dokuiː"
+  },
+  "CLARA": {
+    "original": "clara",
+    "meaning": "clear, distinguished",
+    "part": "Adjective",
+    "pronunciation": "klaraː"
+  },
+  "ILLIC": {
+    "original": "illic",
+    "meaning": "at that place, there",
+    "part": "Adverb",
+    "pronunciation": "illikː"
+  },
+  "SACER": {
+    "original": "sacer",
+    "meaning": "holy, sacred",
+    "part": "Adjective",
+    "pronunciation": "saker"
+  },
+  "SACRA": {
+    "original": "sacra",
+    "meaning": "holy, sacred",
+    "part": "Adjective",
+    "pronunciation": "sakra"
+  },
+  "MORAE": {
+    "original": "morae",
+    "meaning": "delay, hindrance",
+    "part": "Noun",
+    "pronunciation": "mɔraɛ"
+  },
+  "LONGE": {
+    "original": "longe",
+    "meaning": "far, far off",
+    "part": "Adverb",
+    "pronunciation": "longeː"
+  },
+  "SUPER": {
+    "original": "super",
+    "meaning": "over",
+    "part": "Preposition",
+    "pronunciation": "super"
+  },
+  "SEDES": {
+    "original": "sedes",
+    "meaning": "seat, abode, habitation",
+    "part": "Noun",
+    "pronunciation": "sedesː"
+  },
+  "SEDIS": {
+    "original": "sedis",
+    "meaning": "seat, abode, habitation",
+    "part": "Noun",
+    "pronunciation": "sɛdɪsː"
+  },
+  "COMAE": {
+    "original": "comae",
+    "meaning": "hair, tresses",
+    "part": "Noun",
+    "pronunciation": "kɔmaɛ"
+  },
+  "BEATA": {
+    "original": "beata",
+    "meaning": "happy, blessed, prosperous, fortunate",
+    "part": "Adjective",
+    "pronunciation": "beataː"
+  },
+  "VERUS": {
+    "original": "verus",
+    "meaning": "true",
+    "part": "Adjective",
+    "pronunciation": "verʊsː"
+  },
+  "VERUM": {
+    "original": "verum",
+    "meaning": "true",
+    "part": "Adjective",
+    "pronunciation": "verʊmː"
+  },
+  "PARCO": {
+    "original": "parco",
+    "meaning": "spare, be sparing of",
+    "part": "Verb",
+    "pronunciation": "parkoː"
+  },
+  "VIRGO": {
+    "original": "virgo",
+    "meaning": "maiden, virgin, girl",
+    "part": "Noun",
+    "pronunciation": "virgoː"
+  },
+  "FORMA": {
+    "original": "forma",
+    "meaning": "shape; beauty",
+    "part": "Noun",
+    "pronunciation": "formaː"
+  },
+  "METUO": {
+    "original": "metuo",
+    "meaning": "to fear, to dread",
+    "part": "Verb",
+    "pronunciation": "metwoː"
+  },
+  "GRATA": {
+    "original": "grata",
+    "meaning": "pleasant; grateful",
+    "part": "Adjective",
+    "pronunciation": "grataː"
+  },
+  "LAUDO": {
+    "original": "laudo",
+    "meaning": "praise",
+    "part": "Verb",
+    "pronunciation": "laudoː"
+  },
+  "ACIES": {
+    "original": "acies",
+    "meaning": "edge; line of battle",
+    "part": "Noun",
+    "pronunciation": "atʃiɛs"
+  },
+  "CUPIO": {
+    "original": "cupio",
+    "meaning": "desire",
+    "part": "Verb",
+    "pronunciation": "kupjoː"
+  },
+  "ABSUM": {
+    "original": "absum",
+    "meaning": "be away, absent",
+    "part": "Verb",
+    "pronunciation": "absum"
+  },
+  "VELUT": {
+    "original": "velut",
+    "meaning": "even as, just as",
+    "part": "Adverb",
+    "pronunciation": "vɛlʊt"
+  },
+  "COMES": {
+    "original": "comes",
+    "meaning": "companion, comrade; attendant, follower",
+    "part": "Noun",
+    "pronunciation": "komɛs"
+  },
+  "NUMEN": {
+    "original": "numen",
+    "meaning": "divine will, deity",
+    "part": "Noun",
+    "pronunciation": "numɛnː"
+  },
+  "FLERE": {
+    "original": "flere",
+    "meaning": "weep",
+    "part": "Verb",
+    "pronunciation": "flɛre"
+  },
+  "NOLLE": {
+    "original": "nolle",
+    "meaning": "be unwilling",
+    "part": "Verb",
+    "pronunciation": "nolle"
+  },
+  "NEMUS": {
+    "original": "nemus",
+    "meaning": "grove, forest",
+    "part": "Noun",
+    "pronunciation": "nɛmus"
+  },
+  "CARUS": {
+    "original": "carus",
+    "meaning": "dear",
+    "part": "Adjective",
+    "pronunciation": "karusː"
+  },
+  "DESUM": {
+    "original": "desum",
+    "meaning": "be lacking",
+    "part": "Verb",
+    "pronunciation": "desumː"
+  },
+  "DISCO": {
+    "original": "disco",
+    "meaning": "learn",
+    "part": "Verb",
+    "pronunciation": "diskoː"
+  },
+  "FUROR": {
+    "original": "furor",
+    "meaning": "rage, fury",
+    "part": "Noun",
+    "pronunciation": "furor"
+  },
+  "AMNIS": {
+    "original": "amnis",
+    "meaning": "river, torrent",
+    "part": "Noun",
+    "pronunciation": "amnis"
+  },
+  "ARBOR": {
+    "original": "arbor",
+    "meaning": "tree",
+    "part": "Noun",
+    "pronunciation": "arbor"
+  },
+  "CIVIS": {
+    "original": "civis",
+    "meaning": "citizen",
+    "part": "Noun",
+    "pronunciation": "tʃivis"
+  },
+  "DONUM": {
+    "original": "donum",
+    "meaning": "gift, present",
+    "part": "Noun",
+    "pronunciation": "donumː"
+  },
+  "NOTUS": {
+    "original": "notus",
+    "meaning": "well-known",
+    "part": "Adjective",
+    "pronunciation": "notusː"
+  },
+  "SINUS": {
+    "original": "sinus",
+    "meaning": "fold of a garment; lap, bay, gulf",
+    "part": "Noun",
+    "pronunciation": "sinus"
+  },
+  "RUMPO": {
+    "original": "rumpo",
+    "meaning": "break, rupture",
+    "part": "Verb",
+    "pronunciation": "rumpoː"
+  },
+  "PRIUS": {
+    "original": "prius",
+    "meaning": "before",
+    "part": "Adverb",
+    "pronunciation": "prius"
+  },
+  "POSCO": {
+    "original": "posco",
+    "meaning": "demand, claim; inquire into",
+    "part": "Verb",
+    "pronunciation": "poskoː"
+  },
+  "PERDO": {
+    "original": "perdo",
+    "meaning": "destroy",
+    "part": "Verb",
+    "pronunciation": "perdoː"
+  },
+  "TENER": {
+    "original": "tener",
+    "meaning": "tender",
+    "part": "Adjective",
+    "pronunciation": "tener"
+  },
+  "ANIMA": {
+    "original": "anima",
+    "meaning": "breath, spirit",
+    "part": "Noun",
+    "pronunciation": "anima"
+  },
+  "SOROR": {
+    "original": "soror",
+    "meaning": "sister",
+    "part": "Noun",
+    "pronunciation": "soror"
+  },
+  "EXIGO": {
+    "original": "exigo",
+    "meaning": "drive out; collect",
+    "part": "Verb",
+    "pronunciation": "eksigoː"
+  },
+  "NIMIA": {
+    "original": "nimia",
+    "meaning": "too much, excessive",
+    "part": "Adjective",
+    "pronunciation": "nimja"
+  },
+  "FALLO": {
+    "original": "fallo",
+    "meaning": "deceive",
+    "part": "Verb",
+    "pronunciation": "falloː"
+  },
+  "MIROR": {
+    "original": "miror",
+    "meaning": "wonder at, marvel at",
+    "part": "Verb",
+    "pronunciation": "mirorː"
+  },
+  "SEDEO": {
+    "original": "sedeo",
+    "meaning": "sit",
+    "part": "Verb",
+    "pronunciation": "sɛdɛoː"
+  },
+  "MURUS": {
+    "original": "murus",
+    "meaning": "wall",
+    "part": "Noun",
+    "pronunciation": "murusː"
+  },
+  "NOCEO": {
+    "original": "noceo",
+    "meaning": "harm",
+    "part": "Verb",
+    "pronunciation": "noʧɛoː"
+  },
+  "FACIS": {
+    "original": "facis",
+    "meaning": "torch",
+    "part": "Noun",
+    "pronunciation": "fatis"
+  },
+  "IUNGO": {
+    "original": "iungo",
+    "meaning": "join",
+    "part": "Verb",
+    "pronunciation": "jungoː"
+  },
+  "LIMEN": {
+    "original": "limen",
+    "meaning": "threshold",
+    "part": "Noun",
+    "pronunciation": "limɛnː"
+  },
+  "QUERI": {
+    "original": "queri",
+    "meaning": "complain of, lament",
+    "part": "Verb",
+    "pronunciation": "kʷɛriː"
+  },
+  "ODIUM": {
+    "original": "odium",
+    "meaning": "hatred",
+    "part": "Noun",
+    "pronunciation": "odium"
+  },
+  "FUNDO": {
+    "original": "fundo",
+    "meaning": "pour, scatter",
+    "part": "Verb",
+    "pronunciation": "fundoː"
+  },
+  "FUNUS": {
+    "original": "funus",
+    "meaning": "funeral; death; dead body",
+    "part": "Noun",
+    "pronunciation": "funusː"
+  },
+  "PRIOR": {
+    "original": "prior",
+    "meaning": "earlier, preceding",
+    "part": "Adjective",
+    "pronunciation": "prior"
+  },
+  "USQUE": {
+    "original": "usque",
+    "meaning": "up to; continuously",
+    "part": "Adverb",
+    "pronunciation": "uskweː"
+  },
+  "DUBIA": {
+    "original": "dubia",
+    "meaning": "doubtful; a doubt; sine dubiō, without a doubt, certainly",
+    "part": "Adjective",
+    "pronunciation": "dubja"
+  },
+  "TENDO": {
+    "original": "tendo",
+    "meaning": "stretch, extend, direct (one's steps or course)",
+    "part": "Verb",
+    "pronunciation": "tendoː"
+  },
+  "TANGO": {
+    "original": "tango",
+    "meaning": "touch",
+    "part": "Verb",
+    "pronunciation": "tangoː"
+  },
+  "TIMOR": {
+    "original": "timor",
+    "meaning": "fear",
+    "part": "Noun",
+    "pronunciation": "timor"
+  },
+  "SUBEO": {
+    "original": "subeo",
+    "meaning": "go under; endure",
+    "part": "Verb",
+    "pronunciation": "subɛoː"
+  },
+  "VALEO": {
+    "original": "valeo",
+    "meaning": "be strong, excel, be valid, prevail; valē: farewell!",
+    "part": "Verb",
+    "pronunciation": "valɛoː"
+  },
+  "CONDO": {
+    "original": "condo",
+    "meaning": "build, found; store up; hide, conceal",
+    "part": "Verb",
+    "pronunciation": "kondoː"
+  },
+  "NEFAS": {
+    "original": "nefas",
+    "meaning": "impiety, wickedness",
+    "part": "Noun",
+    "pronunciation": "nefasː"
+  },
+  "NUDUS": {
+    "original": "nudus",
+    "meaning": "naked, bare",
+    "part": "Adjective",
+    "pronunciation": "nudusː"
+  },
+  "DECUS": {
+    "original": "decus",
+    "meaning": "beauty, grace; ornament, glory, honor",
+    "part": "Noun",
+    "pronunciation": "dɛkus"
+  },
+  "SALUS": {
+    "original": "salus",
+    "meaning": "health, safety",
+    "part": "Noun",
+    "pronunciation": "salusː"
+  },
+  "PATEO": {
+    "original": "pateo",
+    "meaning": "lie open, extend; be evident or obvious",
+    "part": "Verb",
+    "pronunciation": "patɛoː"
+  },
+  "PATUI": {
+    "original": "patui",
+    "meaning": "lie open, extend; be evident or obvious",
+    "part": "Verb",
+    "pronunciation": "patuiː"
+  },
+  "ABEII": {
+    "original": "abeii",
+    "meaning": "go away",
+    "part": "Verb",
+    "pronunciation": "abeiiː"
+  },
+  "SENEX": {
+    "original": "senex",
+    "meaning": "old man, elder; senior, older",
+    "part": "Noun",
+    "pronunciation": "senɛks"
+  },
+  "SENIS": {
+    "original": "senis",
+    "meaning": "old man, elder; senior, older",
+    "part": "Noun",
+    "pronunciation": "senis"
+  },
+  "FRONS": {
+    "original": "frons",
+    "meaning": "forehead, brow; front",
+    "part": "Noun",
+    "pronunciation": "fronsː"
+  },
+  "REGIA": {
+    "original": "regia",
+    "meaning": "kingly, royal",
+    "part": "Adjective",
+    "pronunciation": "rɛgjaː"
+  },
+  "CURRO": {
+    "original": "curro",
+    "meaning": "run",
+    "part": "Verb",
+    "pronunciation": "kurroː"
+  },
+  "PELLO": {
+    "original": "pello",
+    "meaning": "strike, beat, push, drive",
+    "part": "Verb",
+    "pronunciation": "pɛlloː"
+  },
+  "DIVES": {
+    "original": "dives",
+    "meaning": "rich (poet. dīs, dītis)",
+    "part": "Adjective",
+    "pronunciation": "divɛsː"
+  },
+  "PECUS": {
+    "original": "pecus",
+    "meaning": "cattle, sheep",
+    "part": "Noun",
+    "pronunciation": "pɛkus"
+  },
+  "SURGO": {
+    "original": "surgo",
+    "meaning": "rise",
+    "part": "Verb",
+    "pronunciation": "surgoː"
+  },
+  "CAREO": {
+    "original": "careo",
+    "meaning": "lack",
+    "part": "Verb",
+    "pronunciation": "kareoː"
+  },
+  "CARUI": {
+    "original": "carui",
+    "meaning": "lack",
+    "part": "Verb",
+    "pronunciation": "karuiː"
+  },
+  "SERMO": {
+    "original": "sermo",
+    "meaning": "conversation, discourse",
+    "part": "Noun",
+    "pronunciation": "sermoː"
+  },
+  "AGITO": {
+    "original": "agito",
+    "meaning": "drive",
+    "part": "Verb",
+    "pronunciation": "adʒitoː"
+  },
+  "FORTE": {
+    "original": "forte",
+    "meaning": "by chance",
+    "part": "Adverb",
+    "pronunciation": "fortɛ"
+  },
+  "MOROR": {
+    "original": "moror",
+    "meaning": "delay",
+    "part": "Verb",
+    "pronunciation": "moror"
+  },
+  "SONUI": {
+    "original": "sonui",
+    "meaning": "sound, resound",
+    "part": "Verb",
+    "pronunciation": "sonuiː"
+  },
+  "REGIO": {
+    "original": "regio",
+    "meaning": "boundary, region",
+    "part": "Noun",
+    "pronunciation": "rɛgjoː"
+  },
+  "ACRIS": {
+    "original": "acris",
+    "meaning": "sharp, piercing",
+    "part": "Adjective",
+    "pronunciation": "akrisː"
+  },
+  "SUPRA": {
+    "original": "supra",
+    "meaning": "above, beyond",
+    "part": "Preposition",
+    "pronunciation": "supraː"
+  },
+  "BREVE": {
+    "original": "breve",
+    "meaning": "short, shallow, brief",
+    "part": "Adjective",
+    "pronunciation": "brɛve"
+  },
+  "CITUS": {
+    "original": "citus",
+    "meaning": "swift; citō swiftly",
+    "part": "Adjective",
+    "pronunciation": "tʃitus"
+  },
+  "CITUM": {
+    "original": "citum",
+    "meaning": "swift; citō swiftly",
+    "part": "Adjective",
+    "pronunciation": "tʃitum"
+  },
+  "CORNU": {
+    "original": "cornu",
+    "meaning": "horn",
+    "part": "Noun",
+    "pronunciation": "kornu"
+  },
+  "ADEII": {
+    "original": "adeii",
+    "meaning": "go to",
+    "part": "Verb",
+    "pronunciation": "adeiiː"
+  },
+  "EXEII": {
+    "original": "exeii",
+    "meaning": "go forth",
+    "part": "Verb",
+    "pronunciation": "ekseiiː"
+  },
+  "MALLE": {
+    "original": "malle",
+    "meaning": "prefer",
+    "part": "Verb",
+    "pronunciation": "malle"
+  },
+  "MALUI": {
+    "original": "malui",
+    "meaning": "prefer",
+    "part": "Verb",
+    "pronunciation": "maluiː"
+  },
+  "ULTRA": {
+    "original": "ultra",
+    "meaning": "beyond, further (adv. and prep. + acc.)",
+    "part": "Preposition",
+    "pronunciation": "ultraː"
+  },
+  "CERTE": {
+    "original": "certe",
+    "meaning": "certainly, surely",
+    "part": "Adverb",
+    "pronunciation": "tʃerteː"
+  },
+  "CREVI": {
+    "original": "crevi",
+    "meaning": "grow, increase",
+    "part": "Verb",
+    "pronunciation": "kreːviː"
+  },
+  "AEQUA": {
+    "original": "aequa",
+    "meaning": "equal",
+    "part": "Adjective",
+    "pronunciation": "ɛkʷa"
+  },
+  "FACTI": {
+    "original": "facti",
+    "meaning": "deed, accomplishment",
+    "part": "Noun",
+    "pronunciation": "faktiː"
+  },
+  "CAEDO": {
+    "original": "caedo",
+    "meaning": "strike, kill, cut down",
+    "part": "Verb",
+    "pronunciation": "kaedoː"
+  },
+  "PUDOR": {
+    "original": "pudor",
+    "meaning": "sense of shame, modesty, propriety",
+    "part": "Noun",
+    "pronunciation": "pudor"
+  },
+  "ARDEO": {
+    "original": "ardeo",
+    "meaning": "blaze, glow; be eager",
+    "part": "Verb",
+    "pronunciation": "ardeoː"
+  },
+  "ARSUM": {
+    "original": "arsum",
+    "meaning": "blaze, glow; be eager",
+    "part": "Verb",
+    "pronunciation": "arsumː"
+  },
+  "DESII": {
+    "original": "desii",
+    "meaning": "leave off, cease",
+    "part": "Verb",
+    "pronunciation": "desiiː"
+  },
+  "FESSA": {
+    "original": "fessa",
+    "meaning": "weary, tired",
+    "part": "Adjective",
+    "pronunciation": "fessa"
+  },
+  "PONTI": {
+    "original": "ponti",
+    "meaning": "the open sea, the deep",
+    "part": "Noun",
+    "pronunciation": "pontiː"
+  },
+  "VARIA": {
+    "original": "varia",
+    "meaning": "changing, varied, various",
+    "part": "Adjective",
+    "pronunciation": "varja"
+  },
+  "FALSA": {
+    "original": "falsa",
+    "meaning": "deceptive, false",
+    "part": "Adjective",
+    "pronunciation": "falsa"
+  },
+  "NIGER": {
+    "original": "niger",
+    "meaning": "black",
+    "part": "Adjective",
+    "pronunciation": "niger"
+  },
+  "NIGRA": {
+    "original": "nigra",
+    "meaning": "black",
+    "part": "Adjective",
+    "pronunciation": "nigra"
+  },
+  "ARVUM": {
+    "original": "arvum",
+    "meaning": "ploughed land, field",
+    "part": "Noun",
+    "pronunciation": "arvum"
+  },
+  "ARCIS": {
+    "original": "arcis",
+    "meaning": "citadel, castle; summit",
+    "part": "Noun",
+    "pronunciation": "arkis"
+  },
+  "VINUM": {
+    "original": "vinum",
+    "meaning": "vine, wine",
+    "part": "Noun",
+    "pronunciation": "vinʊmː"
+  },
+  "ORIOR": {
+    "original": "orior",
+    "meaning": "arise, begin",
+    "part": "Verb",
+    "pronunciation": "orjor"
+  },
+  "ORIRI": {
+    "original": "oriri",
+    "meaning": "arise, begin",
+    "part": "Verb",
+    "pronunciation": "oririː"
+  },
+  "SPERO": {
+    "original": "spero",
+    "meaning": "to hope",
+    "part": "Verb",
+    "pronunciation": "speroː"
+  },
+  "PLEBS": {
+    "original": "plebs",
+    "meaning": "the common people",
+    "part": "Noun",
+    "pronunciation": "plebsː"
+  },
+  "PUGNA": {
+    "original": "pugna",
+    "meaning": "fist-fight; battle",
+    "part": "Noun",
+    "pronunciation": "pugnaː"
+  },
+  "CERNO": {
+    "original": "cerno",
+    "meaning": "discern, separate",
+    "part": "Verb",
+    "pronunciation": "tʃernoː"
+  },
+  "MORBI": {
+    "original": "morbi",
+    "meaning": "sickness, disease",
+    "part": "Noun",
+    "pronunciation": "morbiː"
+  },
+  "RIPAE": {
+    "original": "ripae",
+    "meaning": "bank of a river",
+    "part": "Noun",
+    "pronunciation": "ripaeː"
+  },
+  "HORAE": {
+    "original": "horae",
+    "meaning": "hour",
+    "part": "Noun",
+    "pronunciation": "horaeː"
+  },
+  "VETUI": {
+    "original": "vetui",
+    "meaning": "forbid",
+    "part": "Verb",
+    "pronunciation": "vetuiː"
+  },
+  "GIGNO": {
+    "original": "gigno",
+    "meaning": "beget, bear, bring forth",
+    "part": "Verb",
+    "pronunciation": "gignoː"
+  },
+  "GENUI": {
+    "original": "genui",
+    "meaning": "beget, bear, bring forth",
+    "part": "Verb",
+    "pronunciation": "genuiː"
+  },
+  "VACUA": {
+    "original": "vacua",
+    "meaning": "empty",
+    "part": "Adjective",
+    "pronunciation": "vakwa"
+  },
+  "VAGUS": {
+    "original": "vagus",
+    "meaning": "wandering, shifting",
+    "part": "Adjective",
+    "pronunciation": "vagus"
+  },
+  "VAGUM": {
+    "original": "vagum",
+    "meaning": "wandering, shifting",
+    "part": "Adjective",
+    "pronunciation": "vagum"
+  },
+  "VULGI": {
+    "original": "vulgi",
+    "meaning": "the common people",
+    "part": "Noun",
+    "pronunciation": "vulɡiː"
+  },
+  "VATES": {
+    "original": "vates",
+    "meaning": "poet, bard",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "VATIS": {
+    "original": "vatis",
+    "meaning": "poet, bard",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "ASTRI": {
+    "original": "astri",
+    "meaning": "star; constellation",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "CANIS": {
+    "original": "canis",
+    "meaning": "dog",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "EDERE": {
+    "original": "edere",
+    "meaning": "put forth, state, explain",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "EDIDI": {
+    "original": "edidi",
+    "meaning": "put forth, state, explain",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "AUREA": {
+    "original": "aurea",
+    "meaning": "golden; splendid",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "LATEO": {
+    "original": "lateo",
+    "meaning": "lie hidden, be hidden",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "LATUI": {
+    "original": "latui",
+    "meaning": "lie hidden, be hidden",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "OSSIS": {
+    "original": "ossis",
+    "meaning": "bone",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "DOLUS": {
+    "original": "dolus",
+    "meaning": "artifice, device, trick",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "INTRA": {
+    "original": "intra",
+    "meaning": "within",
+    "part": "Preposition",
+    "pronunciation": ""
+  },
+  "PUGNO": {
+    "original": "pugno",
+    "meaning": "fight",
+    "part": "Verb",
+    "pronunciation": "pugnoː"
+  },
+  "AUGEO": {
+    "original": "augeo",
+    "meaning": "increase",
+    "part": "Verb",
+    "pronunciation": "augeoː"
+  },
+  "MONEO": {
+    "original": "moneo",
+    "meaning": "warn, advise",
+    "part": "Verb",
+    "pronunciation": "moneoː"
+  },
+  "MONUI": {
+    "original": "monui",
+    "meaning": "warn, advise",
+    "part": "Verb",
+    "pronunciation": "monuiː"
+  },
+  "OTIUM": {
+    "original": "otium",
+    "meaning": "leisure",
+    "part": "Noun",
+    "pronunciation": "otjʊmː"
+  },
+  "SITUM": {
+    "original": "situm",
+    "meaning": "allow, let go",
+    "part": "Verb",
+    "pronunciation": "situm"
+  },
+  "DECET": {
+    "original": "decet",
+    "meaning": "it is right, proper, fitting",
+    "part": "Verb",
+    "pronunciation": "dɛket"
+  },
+  "FINGO": {
+    "original": "fingo",
+    "meaning": "shape; invent",
+    "part": "Verb",
+    "pronunciation": "fingoː"
+  },
+  "FINXI": {
+    "original": "finxi",
+    "meaning": "shape; invent",
+    "part": "Verb",
+    "pronunciation": "finksiː"
+  },
+  "COLOR": {
+    "original": "color",
+    "meaning": "color",
+    "part": "Noun",
+    "pronunciation": "kolor"
+  },
+  "CAECA": {
+    "original": "caeca",
+    "meaning": "blind, unseeing; dark, obscure",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "LIBET": {
+    "original": "libet",
+    "meaning": "it is pleasing",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "CIRCA": {
+    "original": "circa",
+    "meaning": "around (adv. and prep. +acc.)",
+    "part": "Preposition",
+    "pronunciation": ""
+  },
+  "TARDA": {
+    "original": "tarda",
+    "meaning": "slow, sluggish, lingering",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "HUMUS": {
+    "original": "humus",
+    "meaning": "ground; humī: on the ground",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "AERIS": {
+    "original": "āeris",
+    "meaning": "air",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "CELER": {
+    "original": "celer",
+    "meaning": "swift",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "MENSA": {
+    "original": "mensa",
+    "meaning": "table",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "DAMNO": {
+    "original": "damno",
+    "meaning": "condemn",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "RARUS": {
+    "original": "rarus",
+    "meaning": "wide apart, loose, thin; rare, seldom",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "RARUM": {
+    "original": "rarum",
+    "meaning": "wide apart, loose, thin; rare, seldom",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "IMAGO": {
+    "original": "imago",
+    "meaning": "image, form, figure",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "ORARE": {
+    "original": "orare",
+    "meaning": "pray",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "PORTA": {
+    "original": "porta",
+    "meaning": "gate",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "INTRO": {
+    "original": "intro",
+    "meaning": "enter",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "CULPA": {
+    "original": "culpa",
+    "meaning": "guilt, fault, blame",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "IUSTA": {
+    "original": "iusta",
+    "meaning": "right, just, fair",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "DONEC": {
+    "original": "donec",
+    "meaning": "until",
+    "part": "Conjunction",
+    "pronunciation": ""
+  },
+  "FLUXI": {
+    "original": "fluxi",
+    "meaning": "flow",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "RATUS": {
+    "original": "ratus",
+    "meaning": "think, imagine, suppose, deem",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "RATUM": {
+    "original": "ratum",
+    "meaning": "think, imagine, suppose, deem",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "CINIS": {
+    "original": "cinis",
+    "meaning": "ashes, embers",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "LAEDO": {
+    "original": "laedo",
+    "meaning": "injure by striking, hurt",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "LAESI": {
+    "original": "laesi",
+    "meaning": "injure by striking, hurt",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "PROBO": {
+    "original": "probo",
+    "meaning": "approve, prove; convince one (dat.) of a thing",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "DOLEO": {
+    "original": "doleo",
+    "meaning": "feel pain or grief, grieve",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "DOLUI": {
+    "original": "dolui",
+    "meaning": "feel pain or grief, grieve",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "QUARE": {
+    "original": "quare",
+    "meaning": "how? why?",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "SEMEL": {
+    "original": "semel",
+    "meaning": "once",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "SICUT": {
+    "original": "sicut",
+    "meaning": "just as",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "PECCO": {
+    "original": "pecco",
+    "meaning": "commit a wrong, injure",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "VERTI": {
+    "original": "verti",
+    "meaning": "turn about, turn, change",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "IUDEX": {
+    "original": "iudex",
+    "meaning": "judge, juror",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "LAPIS": {
+    "original": "lapis",
+    "meaning": "stone",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "NIMIS": {
+    "original": "nimis",
+    "meaning": "excessively",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "OPERA": {
+    "original": "opera",
+    "meaning": "labor, activity, work",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "PAREO": {
+    "original": "pareo",
+    "meaning": "obey",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "PARUI": {
+    "original": "parui",
+    "meaning": "obey",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "MEREO": {
+    "original": "mereo",
+    "meaning": "deserve, merit; serve as a soldier",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "MERUI": {
+    "original": "merui",
+    "meaning": "deserve, merit; serve as a soldier",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "PORTO": {
+    "original": "porto",
+    "meaning": "carry a load",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "VANUS": {
+    "original": "vanus",
+    "meaning": "empty; false, deceitful",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "VANUM": {
+    "original": "vanum",
+    "meaning": "empty; false, deceitful",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "PAUCI": {
+    "original": "pauci",
+    "meaning": "few, a few",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "PAUCA": {
+    "original": "pauca",
+    "meaning": "few, a few",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "CIBUS": {
+    "original": "cibus",
+    "meaning": "food",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "CERTO": {
+    "original": "certo",
+    "meaning": "decide by contest; fight, compete, vie",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "TURBO": {
+    "original": "turbo",
+    "meaning": "disturb, confuse",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "PAULO": {
+    "original": "paulo",
+    "meaning": "to only a small extent, slightly, a little",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "RIDEO": {
+    "original": "rideo",
+    "meaning": "laugh, laugh at",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "AEVUM": {
+    "original": "aevum",
+    "meaning": "eternity; lifetime, age",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "AUDAX": {
+    "original": "audax",
+    "meaning": "bold, daring; reckless",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "RURIS": {
+    "original": "ruris",
+    "meaning": "country",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "IACIO": {
+    "original": "iacio",
+    "meaning": "throw, hurl",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "LIBRI": {
+    "original": "libri",
+    "meaning": "book",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "LUNAE": {
+    "original": "lunae",
+    "meaning": "moon",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "AEQUE": {
+    "original": "aeque",
+    "meaning": "equally",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "CONOR": {
+    "original": "conor",
+    "meaning": "try, attempt",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "FILIA": {
+    "original": "filia",
+    "meaning": "daughter",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "FILII": {
+    "original": "filii",
+    "meaning": "son",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "NARRO": {
+    "original": "narro",
+    "meaning": "relate, recount",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "POETA": {
+    "original": "poeta",
+    "meaning": "poet",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "DECEM": {
+    "original": "decem",
+    "meaning": "ten",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "AMPLA": {
+    "original": "ampla",
+    "meaning": "large, spacious",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "APTUS": {
+    "original": "aptus",
+    "meaning": "fit, suitable",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "APTUM": {
+    "original": "aptum",
+    "meaning": "fit, suitable",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "FOEDA": {
+    "original": "foeda",
+    "meaning": "foul",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "FRUOR": {
+    "original": "fruor",
+    "meaning": "enjoy the produce of, profit by, use",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "EDUCO": {
+    "original": "educo",
+    "meaning": "lead forth",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "EDUXI": {
+    "original": "eduxi",
+    "meaning": "lead forth",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "QUASI": {
+    "original": "quasi",
+    "meaning": "as if",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "CAVEO": {
+    "original": "caveo",
+    "meaning": "be on guard, beware",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "ELIGO": {
+    "original": "eligo",
+    "meaning": "pick out, select",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "ELEGI": {
+    "original": "elegi",
+    "meaning": "pick out, select",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "PAENE": {
+    "original": "paene",
+    "meaning": "almost",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "SANUS": {
+    "original": "sanus",
+    "meaning": "sound, sane",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "SANUM": {
+    "original": "sanum",
+    "meaning": "sound, sane",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "POTIS": {
+    "original": "potis",
+    "meaning": "powerful, able",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "ILLUC": {
+    "original": "illuc",
+    "meaning": "to that place",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "DIVUS": {
+    "original": "divus",
+    "meaning": "divine, godlike; (as subst.) a god",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "DIVUM": {
+    "original": "divum",
+    "meaning": "divine, godlike; (as subst.) a god",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "AEDES": {
+    "original": "aedes",
+    "meaning": "building; (pl.) house",
+    "part": "Noun",
+    "pronunciation": ""
+  },
+  "PLERA": {
+    "original": "plera",
+    "meaning": "the greater part, very many, most, the majority",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "HODIE": {
+    "original": "hodie",
+    "meaning": "today",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "AEGRE": {
+    "original": "aegre",
+    "meaning": "with difficulty",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "PENDO": {
+    "original": "pendo",
+    "meaning": "weigh, hang, suspend; pay",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "VULGO": {
+    "original": "vulgo",
+    "meaning": "commonly",
+    "part": "Adverb",
+    "pronunciation": ""
+  },
+  "EDICO": {
+    "original": "edico",
+    "meaning": "declare",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "EDIXI": {
+    "original": "edixi",
+    "meaning": "declare",
+    "part": "Verb",
+    "pronunciation": ""
+  },
+  "MUNDA": {
+    "original": "munda",
+    "meaning": "clean, neat, elegant",
+    "part": "Adjective",
+    "pronunciation": ""
+  },
+  "ESTIS": {
+    "original": "estis",
+    "meaning": "to be",
+    "part": "Verb",
+    "pronunciation": "estis"
+  },
+  "OMNIA": {
+    "original": "omnia",
+    "meaning": "in all respects",
+    "part": "Noun",
+    "pronunciation": "ohm-nia"
+  },
+  "ASPER": {
+    "original": "asper",
+    "meaning": "No translation available",
+    "part": "Adjective",
+    "pronunciation": "ˈaspɛr"
+  },
+  "MIRUS": {
+    "original": "mirus",
+    "meaning": "No translation available",
+    "part": "Adjective",
+    "pronunciation": "ˈmɪrʊs"
+  },
+  "VELOX": {
+    "original": "velox",
+    "meaning": "No translation available",
+    "part": "Adjective",
+    "pronunciation": "ˈʋɛlɔks"
+  },
+  "VETUS": {
+    "original": "vetus",
+    "meaning": "No translation available",
+    "part": "Adjective",
+    "pronunciation": "ˈʋɛtʊs"
+  },
+  "ALIAS": {
+    "original": "alias",
+    "meaning": "No translation available",
+    "part": "Adverb",
+    "pronunciation": "ˈaliːas"
+  },
+  "INTUS": {
+    "original": "intus",
+    "meaning": "No translation available",
+    "part": "Adverb",
+    "pronunciation": "ˈintʊs"
+  },
+  "PALAM": {
+    "original": "palam",
+    "meaning": "No translation available",
+    "part": "Adverb",
+    "pronunciation": "ˈpalam"
+  },
+  "PLANE": {
+    "original": "plane",
+    "meaning": "No translation available",
+    "part": "Adverb",
+    "pronunciation": "ˈplanɛ"
+  },
+  "RECTE": {
+    "original": "recte",
+    "meaning": "No translation available",
+    "part": "Adverb",
+    "pronunciation": "ˈrɛktɛ"
+  },
+  "RETRO": {
+    "original": "retro",
+    "meaning": "No translation available",
+    "part": "Adverb",
+    "pronunciation": "ˈrɛtro"
+  },
+  "ULTRO": {
+    "original": "ultro",
+    "meaning": "No translation available",
+    "part": "Adverb",
+    "pronunciation": "ˈʊltro"
+  },
+  "ARCUS": {
+    "original": "arcus",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈarkus"
+  },
+  "AUGUR": {
+    "original": "augur",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈauɡur"
+  },
+  "BELUA": {
+    "original": "belua",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈbelua"
+  },
+  "DECOR": {
+    "original": "decor",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈdekor"
+  },
+  "EXSUL": {
+    "original": "exsul",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈeksul"
+  },
+  "FORUM": {
+    "original": "forum",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈforum"
+  },
+  "GEMMA": {
+    "original": "gemma",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈɡemma"
+  },
+  "HASTA": {
+    "original": "hasta",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈhasta"
+  },
+  "HONOR": {
+    "original": "honor",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈhonor"
+  },
+  "LUDUS": {
+    "original": "ludus",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈludus"
+  },
+  "MORES": {
+    "original": "mores",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈmores"
+  },
+  "MUNIA": {
+    "original": "munia",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈmunia"
+  },
+  "NAUTA": {
+    "original": "nauta",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈnauta"
+  },
+  "NUBES": {
+    "original": "nubes",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈnubes"
+  },
+  "OBSES": {
+    "original": "obses",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈobses"
+  },
+  "PEDES": {
+    "original": "pedes",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈpedes"
+  },
+  "SERVA": {
+    "original": "serva",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈserʋa"
+  },
+  "SUMMA": {
+    "original": "summa",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈsumma"
+  },
+  "VACCA": {
+    "original": "vacca",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈvakka"
+  },
+  "VICUS": {
+    "original": "vicus",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈvikus"
+  },
+  "VILLA": {
+    "original": "villa",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈvilla"
+  },
+  "VIRES": {
+    "original": "vires",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈvires"
+  },
+  "VISUS": {
+    "original": "visus",
+    "meaning": "No translation available",
+    "part": "Noun",
+    "pronunciation": "ˈvisus"
+  },
+  "BELLO": {
+    "original": "bello",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈbel.lo"
+  },
+  "CALEO": {
+    "original": "caleo",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈka.le.o"
+  },
+  "CAPTO": {
+    "original": "capto",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈkap.to"
+  },
+  "CARPO": {
+    "original": "carpo",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈkar.po"
+  },
+  "CESSO": {
+    "original": "cesso",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈtʃes.so"
+  },
+  "CINGO": {
+    "original": "cingo",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈtʃin.go"
+  },
+  "CULPO": {
+    "original": "culpo",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈkul.po"
+  },
+  "DELEO": {
+    "original": "deleo",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈde.le.o"
+  },
+  "EICIO": {
+    "original": "eicio",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈei.tʃo"
+  },
+  "FIRMO": {
+    "original": "firmo",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈfir.mo"
+  },
+  "GUSTO": {
+    "original": "gusto",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈgus.to"
+  },
+  "NITOR": {
+    "original": "nitor",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈni.tor"
+  },
+  "PARIO": {
+    "original": "pario",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈpa.ri.o"
+  },
+  "PASCO": {
+    "original": "pasco",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈpas.ko"
+  },
+  "PUNIO": {
+    "original": "punio",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈpu.ni.o"
+  },
+  "RESTO": {
+    "original": "resto",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈres.to"
+  },
+  "SERVO": {
+    "original": "servo",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈser.vo"
+  },
+  "SPIRO": {
+    "original": "spiro",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈspi.ro"
+  },
+  "TOLLO": {
+    "original": "tollo",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈtol.lo"
+  },
+  "TUTOR": {
+    "original": "tutor",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈtu.tor"
+  },
+  "VAGOR": {
+    "original": "vagor",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈva.gor"
+  },
+  "VERTO": {
+    "original": "verto",
+    "meaning": "No translation available",
+    "part": "Verb",
+    "pronunciation": "ˈver.to"
+  }
+}

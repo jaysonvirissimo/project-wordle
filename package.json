@@ -15,9 +15,10 @@
     "rimraf": "5.0.1"
   },
   "scripts": {
-    "predev": "rimraf .parcel-cache dist",
+    "predev": "npm run build:dictionary && rimraf .parcel-cache dist",
     "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html",
+    "build": "npm run build:dictionary && parcel build public/index.html",
+    "build:dictionary": "node scripts/build-dictionary.js",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "test": "jest",
     "new-component": "new-component"

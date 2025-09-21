@@ -13,3 +13,12 @@ export const range = (start, end, step = 1) => {
   }
   return output;
 };
+
+export const sampleWord = (wordsDict) => {
+  const words = Object.keys(wordsDict);
+  const randomWord = sample(words);
+  return {
+    word: randomWord,
+    data: wordsDict[randomWord]
+  };
+};
