@@ -2,9 +2,9 @@ import React from 'react';
 import Guess from '../Guess/Guess';
 import {NUM_OF_GUESSES_ALLOWED} from '../../constants';
 
-function GuessResults({guesses}) {
+function GuessResults({guesses, answer}) {
   const entries = guesses.map((guess) => {
-    return <Guess guess={guess} key={guess}></Guess>;
+    return <Guess answer={answer} guess={guess} key={guess}></Guess>;
   });
 
   while (entries.length < NUM_OF_GUESSES_ALLOWED) {

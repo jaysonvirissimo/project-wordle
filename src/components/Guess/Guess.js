@@ -1,16 +1,19 @@
 import React from 'react';
 import {range} from "../../utils";
 import { GUESS_LENGTH } from '../../constants';
+import { checkGuess } from '../../game-helpers';
 
-function Guess({guess}) {
+function Guess({guess, answer}) {
   const spans = [];
   if (guess) {
-    guess.split("").forEach((character) => {
-      spans.push(<span class="cell">{character}</span>);
+    checkGuess(guess, answer).forEach((result) => {
+      const classes = ["cell"];
+      classes.push(result.status);
+      spans.push(<span className={classes.join(" ")}>{result.letter}</span>);
     })
   } else {
     range(GUESS_LENGTH).forEach((index) => {
-      spans.push(<span class="cell">{" "}</span>);
+      spans.push(<span className="cell">{" "}</span>);
     })
   }
 
