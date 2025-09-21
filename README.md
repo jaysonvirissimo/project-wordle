@@ -38,10 +38,16 @@ npm run build
 ### Available Scripts
 
 - `npm run dev` - Start development server
-- `npm run build` - Build for production
+- `npm run build` - Build for production (local)
+- `npm run build:production` - Build for GitHub Pages deployment
+- `npm run build:dictionary` - Fetch and process Latin dictionary
 - `npm test` - Run test suite
 - `npm run lint` - Run ESLint
 - `npm run new-component` - Generate new React component
+
+### Deployment
+
+This project automatically deploys to GitHub Pages when you push to the `main` branch. The deployed site will be available at `http://virissimo.info/verbula/`.
 
 ### How to Play
 
