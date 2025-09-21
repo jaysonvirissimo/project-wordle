@@ -1,7 +1,7 @@
 import React from 'react';
+import { GUESS_LENGTH } from '../../constants';
 
 function GuessInput({guesses, setGuesses}) {
-  const requiredLength = 5;
   const [guess, setGuess] = React.useState("");
  
 
@@ -15,7 +15,7 @@ function GuessInput({guesses, setGuesses}) {
 
   return (<form className="guess-input-wrapper" onSubmit={onSubmit}>
     <label htmlFor="guess-input">Enter guess:</label>
-    <input id="guess-input" maxLength={requiredLength} minLength={requiredLength} onChange={(event) => setGuess(event.target.value)} type="text" value={guess} />
+    <input id="guess-input" maxLength={GUESS_LENGTH} minLength={GUESS_LENGTH} onChange={(event) => setGuess(event.target.value)} type="text" value={guess} />
   </form>);
 }
 

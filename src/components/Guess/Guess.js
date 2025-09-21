@@ -1,5 +1,6 @@
 import React from 'react';
 import {range} from "../../utils";
+import { GUESS_LENGTH } from '../../constants';
 
 function Guess({guess}) {
   const spans = [];
@@ -8,7 +9,7 @@ function Guess({guess}) {
       spans.push(<span class="cell">{character}</span>);
     })
   } else {
-    range(5).forEach((index) => {
+    range(GUESS_LENGTH).forEach((index) => {
       spans.push(<span class="cell">{" "}</span>);
     })
   }
