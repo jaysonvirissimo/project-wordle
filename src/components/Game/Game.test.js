@@ -5,7 +5,7 @@ import Game from './Game';
 
 // Mock all child components
 jest.mock('../GuessInput/GuessInput', () => {
-  return function MockGuessInput({ answer, gameOver, guesses, setGameOutcome, setGameOver, setGuesses }) {
+  return function MockGuessInput({ gameOver, onGuessSubmit }) {
     return (
       <div data-testid="guess-input">
         <input
@@ -16,14 +16,8 @@ jest.mock('../GuessInput/GuessInput', () => {
         <button
           data-testid="submit-guess"
           onClick={() => {
-            // Mock winning the game
-            if (answer === 'TERRA') {
-              setGuesses([...guesses, 'TERRA']);
-              setGameOutcome('win');
-              setGameOver(true);
-            } else {
-              setGuesses([...guesses, 'WRONG']);
-            }
+            // Mock submitting a guess
+            onGuessSubmit && onGuessSubmit('TERRA');
           }}
         >
           Submit
@@ -54,6 +48,24 @@ jest.mock('../Banner/Banner', () => {
         {wordData && <div>Meaning: {wordData.meaning}</div>}
         <button data-testid="reset-button" onClick={resetGame}>Reset</button>
       </div>
+    );
+  };
+});
+
+jest.mock('../HintSection/HintSection', () => {
+  return function MockHintSection({ showHint, onToggleHint, wordData, gameOver }) {
+    if (gameOver) return null;
+    return (
+      <>
+        <button data-testid="hint-button" onClick={onToggleHint}>
+          {showHint ? 'Hide Hint' : 'Show Hint'}
+        </button>
+        {showHint && (
+          <div data-testid="hint-display">
+            Hint: {wordData.meaning} ({wordData.part})
+          </div>
+        )}
+      </>
     );
   };
 });
@@ -143,42 +155,43 @@ describe('Game', () => {
     it('renders show hint button when game is not over', () => {
       render(<Game />);
 
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       expect(hintButton).toBeInTheDocument();
+      expect(hintButton).toHaveTextContent('Show Hint');
     });
 
     it('toggles hint visibility when button is clicked', () => {
       render(<Game />);
 
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
 
-      expect(screen.getByText(/hint:/i)).toBeInTheDocument();
-      expect(screen.getByText('earth, land (noun)')).toBeInTheDocument();
-      expect(screen.getByText('Hide Hint')).toBeInTheDocument();
+      expect(screen.getByTestId('hint-display')).toBeInTheDocument();
+      expect(screen.getByText('Hint: earth, land (noun)')).toBeInTheDocument();
+      expect(hintButton).toHaveTextContent('Hide Hint');
     });
 
     it('hides hint when hide button is clicked', () => {
       render(<Game />);
 
-      const showButton = screen.getByText('Show Hint');
-      fireEvent.click(showButton);
+      const hintButton = screen.getByTestId('hint-button');
+      fireEvent.click(hintButton);
 
-      const hideButton = screen.getByText('Hide Hint');
-      fireEvent.click(hideButton);
+      expect(hintButton).toHaveTextContent('Hide Hint');
+      fireEvent.click(hintButton);
 
-      expect(screen.queryByText(/hint:/i)).not.toBeInTheDocument();
-      expect(screen.getByText('Show Hint')).toBeInTheDocument();
+      expect(screen.queryByTestId('hint-display')).not.toBeInTheDocument();
+      expect(hintButton).toHaveTextContent('Show Hint');
     });
 
     it('displays correct hint content', () => {
       render(<Game />);
 
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
 
-      expect(screen.getByText('Hint:')).toBeInTheDocument();
-      expect(screen.getByText('earth, land (noun)')).toBeInTheDocument();
+      expect(screen.getByTestId('hint-display')).toBeInTheDocument();
+      expect(screen.getByText('Hint: earth, land (noun)')).toBeInTheDocument();
     });
 
     it('does not render hint button when game is over', () => {
@@ -188,50 +201,24 @@ describe('Game', () => {
       const submitButton = screen.getByTestId('submit-guess');
       fireEvent.click(submitButton);
 
-      expect(screen.queryByText('Show Hint')).not.toBeInTheDocument();
-      expect(screen.queryByText('Hide Hint')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('hint-button')).not.toBeInTheDocument();
     });
 
     it('hides hint when game ends', () => {
       render(<Game />);
 
       // Show hint first
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
-      expect(screen.getByText(/hint:/i)).toBeInTheDocument();
+      expect(screen.getByTestId('hint-display')).toBeInTheDocument();
 
       // Win the game
       const submitButton = screen.getByTestId('submit-guess');
       fireEvent.click(submitButton);
 
-      expect(screen.queryByText(/hint:/i)).not.toBeInTheDocument();
+      expect(screen.queryByTestId('hint-display')).not.toBeInTheDocument();
     });
 
-    it('has correct styling for hint container', () => {
-      render(<Game />);
-
-      const hintButton = screen.getByText('Show Hint');
-      fireEvent.click(hintButton);
-
-      const hintContainer = screen.getByText(/hint:/i).parentElement;
-      expect(hintContainer).toHaveStyle({
-        textAlign: 'center',
-        margin: '10px 0',
-        padding: '10px',
-        backgroundColor: '#f0f0f0',
-        borderRadius: '5px'
-      });
-    });
-
-    it('has correct styling for hint button', () => {
-      render(<Game />);
-
-      const hintButton = screen.getByText('Show Hint');
-      expect(hintButton).toHaveStyle({
-        padding: '8px 12px',
-        cursor: 'pointer'
-      });
-    });
   });
 
   describe('Game State Management', () => {
@@ -327,9 +314,9 @@ describe('Game', () => {
       render(<Game />);
 
       // Show hint
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
-      expect(screen.getByText(/hint:/i)).toBeInTheDocument();
+      expect(screen.getByTestId('hint-display')).toBeInTheDocument();
 
       // Win the game
       const submitButton = screen.getByTestId('submit-guess');
@@ -340,8 +327,8 @@ describe('Game', () => {
       fireEvent.click(resetButton);
 
       // Hint should be hidden and button should show "Show Hint"
-      expect(screen.queryByText(/hint:/i)).not.toBeInTheDocument();
-      expect(screen.getByText('Show Hint')).toBeInTheDocument();
+      expect(screen.queryByTestId('hint-display')).not.toBeInTheDocument();
+      expect(screen.getByTestId('hint-button')).toHaveTextContent('Show Hint');
     });
   });
 
@@ -387,11 +374,11 @@ describe('Game', () => {
   });
 
   describe('Layout and Styling', () => {
-    it('renders hint button and input in flex container', () => {
+    it('renders hint section and input in flex container', () => {
       render(<Game />);
 
-      const hintButton = screen.getByText('Show Hint');
-      const container = hintButton.parentElement;
+      const guessInput = screen.getByTestId('guess-input');
+      const container = guessInput.parentElement; // GuessInput and HintSection are in flex container
 
       expect(container).toHaveStyle({
         display: 'flex',
@@ -441,10 +428,10 @@ describe('Game', () => {
 
       render(<Game />);
 
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
 
-      expect(screen.getByText('fire, flame (noun)')).toBeInTheDocument();
+      expect(screen.getByText('Hint: fire, flame (noun)')).toBeInTheDocument();
     });
 
     it('handles word data with different parts of speech', () => {
@@ -459,10 +446,10 @@ describe('Game', () => {
 
       render(<Game />);
 
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
 
-      expect(screen.getByText('to love (verb)')).toBeInTheDocument();
+      expect(screen.getByText('Hint: to love (verb)')).toBeInTheDocument();
     });
   });
 
@@ -492,10 +479,10 @@ describe('Game', () => {
 
       render(<Game />);
 
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
 
-      expect(screen.getByText('(noun)')).toBeInTheDocument();
+      expect(screen.getByText(/Hint:.*\(noun\)/)).toBeInTheDocument();
     });
 
     it('handles word data without part', () => {
@@ -509,23 +496,23 @@ describe('Game', () => {
 
       render(<Game />);
 
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
 
-      expect(screen.getByText('earth, land ()')).toBeInTheDocument();
+      expect(screen.getByText('Hint: earth, land ()')).toBeInTheDocument();
     });
 
     it('maintains game state consistency during rapid interactions', () => {
       render(<Game />);
 
       // Rapidly toggle hint
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
-      fireEvent.click(screen.getByText('Hide Hint'));
-      fireEvent.click(screen.getByText('Show Hint'));
+      fireEvent.click(hintButton);
+      fireEvent.click(hintButton);
 
-      expect(screen.getByText(/hint:/i)).toBeInTheDocument();
-      expect(screen.getByText('Hide Hint')).toBeInTheDocument();
+      expect(screen.getByTestId('hint-display')).toBeInTheDocument();
+      expect(hintButton).toHaveTextContent('Hide Hint');
     });
   });
 
@@ -534,17 +521,14 @@ describe('Game', () => {
       render(<Game />);
 
       // Show hint
-      const hintButton = screen.getByText('Show Hint');
+      const hintButton = screen.getByTestId('hint-button');
       fireEvent.click(hintButton);
 
-      // Add a guess (but don't win)
-      sampleWord.mockReturnValue({
-        word: 'WRONG',
-        data: { meaning: 'test', part: 'noun' }
-      });
+      // The hint should be visible
+      expect(screen.getByTestId('hint-display')).toBeInTheDocument();
 
-      // The hint should still be visible until game ends
-      expect(screen.getByText(/hint:/i)).toBeInTheDocument();
+      // Hint should remain visible during normal gameplay
+      expect(screen.getByTestId('hint-display')).toBeInTheDocument();
     });
 
     it('preserves game state across component updates', () => {

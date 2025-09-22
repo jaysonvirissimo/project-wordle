@@ -1,33 +1,19 @@
 import React from 'react';
 import { GUESS_LENGTH } from '../../constants';
-import { checkGuess } from '../../game-helpers';
-import { NUM_OF_GUESSES_ALLOWED } from '../../constants';
 import { normalizeDiacritics } from '../../utils/normalize';
 
-function GuessInput({answer, guesses, gameOver, setGameOutcome, setGameOver, setGuesses}) {
+function GuessInput({ gameOver, onGuessSubmit }) {
   const [guess, setGuess] = React.useState("");
 
   function onSubmit(event) {
     event.preventDefault();
-    const newGuesses = [...guesses];
     const normalizedGuess = normalizeDiacritics(guess);
-    newGuesses.push(normalizedGuess);
-    const correctGuess = checkGuess(normalizedGuess, answer).every((result) => result.status === "correct");
-    if (correctGuess) {
-      setGameOver(true);
-      setGameOutcome("win");
-    } else if (newGuesses.length >= NUM_OF_GUESSES_ALLOWED) {
-      setGameOver(true);
-      setGameOutcome("lose");
-    }
-
-    setGuesses(newGuesses);
+    onGuessSubmit(normalizedGuess);
     setGuess("");
   }
 
   function handleInputChange(event) {
     const value = event.target.value;
-    // Allow typing with diacritics, but normalize for display
     setGuess(value);
   }
 

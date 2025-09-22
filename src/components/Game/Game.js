@@ -2,9 +2,12 @@ import React from 'react';
 
 import { sampleWord } from '../../utils';
 import WORDS_DICT from '../../words.json';
+import { checkGuess } from '../../game-helpers';
+import { NUM_OF_GUESSES_ALLOWED } from '../../constants';
 import GuessInput from '../GuessInput/GuessInput';
 import GuessResults from '../GuessResults/GuessResults';
 import Banner from '../Banner/Banner';
+import HintSection from '../HintSection/HintSection';
 
 function Game() {
   const [wordInfo, setWordInfo] = React.useState(() => sampleWord(WORDS_DICT));
@@ -28,24 +31,29 @@ function Game() {
     setShowHint(!showHint);
   }
 
+  function handleGuessSubmit(normalizedGuess) {
+    const newGuesses = [...guesses, normalizedGuess];
+    const correctGuess = checkGuess(normalizedGuess, answer).every((result) => result.status === "correct");
+
+    if (correctGuess) {
+      setGameOver(true);
+      setGameOutcome("win");
+    } else if (newGuesses.length >= NUM_OF_GUESSES_ALLOWED) {
+      setGameOver(true);
+      setGameOutcome("lose");
+    }
+
+    setGuesses(newGuesses);
+  }
+
   return (<>
     <Banner answer={answer} gameOutcome={gameOutcome} gameOver={gameOver} guesses={guesses} resetGame={resetGame} wordData={wordInfo.data}></Banner>
     <GuessResults answer={answer} guesses={guesses}></GuessResults>
 
     <div style={{display: 'flex', alignItems: 'flex-end', gap: '10px', justifyContent: 'center', marginBottom: '10px'}}>
-      <GuessInput answer={answer} gameOver={gameOver} guesses={guesses} setGameOutcome={setGameOutcome} setGameOver={setGameOver} setGuesses={setGuesses}></GuessInput>
-      {!gameOver && (
-        <button onClick={toggleHint} style={{padding: '8px 12px', cursor: 'pointer'}}>
-          {showHint ? 'Hide Hint' : 'Show Hint'}
-        </button>
-      )}
+      <GuessInput gameOver={gameOver} onGuessSubmit={handleGuessSubmit}></GuessInput>
+      <HintSection showHint={showHint} onToggleHint={toggleHint} wordData={wordInfo.data} gameOver={gameOver}></HintSection>
     </div>
-
-    {showHint && !gameOver && (
-      <div style={{textAlign: 'center', margin: '10px 0', padding: '10px', backgroundColor: '#f0f0f0', borderRadius: '5px'}}>
-        <strong>Hint:</strong> {wordInfo.data.meaning} ({wordInfo.data.part})
-      </div>
-    )}
   </>);
 }
 

@@ -19,12 +19,8 @@ const { normalizeDiacritics } = require('../../utils/normalize');
 describe('GuessInput', () => {
   // Default props for testing
   const defaultProps = {
-    answer: 'TERRA',
-    guesses: [],
     gameOver: false,
-    setGameOutcome: jest.fn(),
-    setGameOver: jest.fn(),
-    setGuesses: jest.fn(),
+    onGuessSubmit: jest.fn(),
   };
 
   beforeEach(() => {
@@ -144,200 +140,59 @@ describe('GuessInput', () => {
 
     it('normalizes guess before processing', async () => {
       const user = userEvent.setup();
-      checkGuess.mockReturnValue([
-        { status: 'correct' },
-        { status: 'correct' },
-        { status: 'correct' },
-        { status: 'correct' },
-        { status: 'correct' },
-      ]);
+      const onGuessSubmit = jest.fn();
 
-      render(<GuessInput {...defaultProps} />);
+      render(<GuessInput {...defaultProps} onGuessSubmit={onGuessSubmit} />);
 
       const input = screen.getByRole('textbox');
       await user.type(input, 'mōtum');
       fireEvent.submit(input.closest('form'));
 
       expect(normalizeDiacritics).toHaveBeenCalledWith('mōtum');
+      expect(onGuessSubmit).toHaveBeenCalledWith('MOTUM');
     });
 
-    it('adds normalized guess to guesses array', async () => {
+    it('calls onGuessSubmit with normalized guess', async () => {
       const user = userEvent.setup();
-      const setGuesses = jest.fn();
-      checkGuess.mockReturnValue([
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-      ]);
+      const onGuessSubmit = jest.fn();
 
-      render(<GuessInput {...defaultProps} setGuesses={setGuesses} />);
+      render(<GuessInput {...defaultProps} onGuessSubmit={onGuessSubmit} />);
 
       const input = screen.getByRole('textbox');
       await user.type(input, 'hello');
       fireEvent.submit(input.closest('form'));
 
-      expect(setGuesses).toHaveBeenCalledWith(['HELLO']);
+      expect(onGuessSubmit).toHaveBeenCalledWith('HELLO');
     });
 
-    it('preserves existing guesses when adding new guess', async () => {
-      const user = userEvent.setup();
-      const setGuesses = jest.fn();
-      const existingGuesses = ['FIRST', 'GUESS'];
-      checkGuess.mockReturnValue([
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-      ]);
-
-      render(<GuessInput {...defaultProps} guesses={existingGuesses} setGuesses={setGuesses} />);
-
-      const input = screen.getByRole('textbox');
-      await user.type(input, 'third');
-      fireEvent.submit(input.closest('form'));
-
-      expect(setGuesses).toHaveBeenCalledWith(['FIRST', 'GUESS', 'THIRD']);
-    });
   });
 
-  describe('Win Condition', () => {
-    it('detects win when all letters are correct', async () => {
+
+  describe('Callback Integration', () => {
+    it('calls onGuessSubmit with normalized guess', async () => {
       const user = userEvent.setup();
-      const setGameOver = jest.fn();
-      const setGameOutcome = jest.fn();
+      const onGuessSubmit = jest.fn();
 
-      checkGuess.mockReturnValue([
-        { status: 'correct' },
-        { status: 'correct' },
-        { status: 'correct' },
-        { status: 'correct' },
-        { status: 'correct' },
-      ]);
-
-      render(<GuessInput {...defaultProps} setGameOver={setGameOver} setGameOutcome={setGameOutcome} />);
-
-      const input = screen.getByRole('textbox');
-      await user.type(input, 'terra');
-      fireEvent.submit(input.closest('form'));
-
-      expect(setGameOver).toHaveBeenCalledWith(true);
-      expect(setGameOutcome).toHaveBeenCalledWith('win');
-    });
-
-    it('does not win when some letters are incorrect', async () => {
-      const user = userEvent.setup();
-      const setGameOver = jest.fn();
-      const setGameOutcome = jest.fn();
-
-      checkGuess.mockReturnValue([
-        { status: 'correct' },
-        { status: 'incorrect' },
-        { status: 'correct' },
-        { status: 'misplaced' },
-        { status: 'correct' },
-      ]);
-
-      render(<GuessInput {...defaultProps} setGameOver={setGameOver} setGameOutcome={setGameOutcome} />);
+      render(<GuessInput {...defaultProps} onGuessSubmit={onGuessSubmit} />);
 
       const input = screen.getByRole('textbox');
       await user.type(input, 'hello');
       fireEvent.submit(input.closest('form'));
 
-      expect(setGameOver).not.toHaveBeenCalled();
-      expect(setGameOutcome).not.toHaveBeenCalled();
-    });
-  });
-
-  describe('Lose Condition', () => {
-    it('detects lose when reaching maximum guesses without winning', async () => {
-      const user = userEvent.setup();
-      const setGameOver = jest.fn();
-      const setGameOutcome = jest.fn();
-      const existingGuesses = ['GUESS', 'WRONG', 'ITEMS', 'TESTS', 'FAILS']; // 5 guesses
-
-      checkGuess.mockReturnValue([
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-      ]);
-
-      render(<GuessInput {...defaultProps} guesses={existingGuesses} setGameOver={setGameOver} setGameOutcome={setGameOutcome} />);
-
-      const input = screen.getByRole('textbox');
-      await user.type(input, 'final');
-      fireEvent.submit(input.closest('form'));
-
-      expect(setGameOver).toHaveBeenCalledWith(true);
-      expect(setGameOutcome).toHaveBeenCalledWith('lose');
+      expect(onGuessSubmit).toHaveBeenCalledWith('HELLO');
     });
 
-    it('does not lose before reaching maximum guesses', async () => {
+    it('handles diacritic normalization in callback', async () => {
       const user = userEvent.setup();
-      const setGameOver = jest.fn();
-      const setGameOutcome = jest.fn();
-      const existingGuesses = ['GUESS', 'WRONG', 'ITEMS']; // 3 guesses
+      const onGuessSubmit = jest.fn();
 
-      checkGuess.mockReturnValue([
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-      ]);
-
-      render(<GuessInput {...defaultProps} guesses={existingGuesses} setGameOver={setGameOver} setGameOutcome={setGameOutcome} />);
+      render(<GuessInput {...defaultProps} onGuessSubmit={onGuessSubmit} />);
 
       const input = screen.getByRole('textbox');
-      await user.type(input, 'test');
+      await user.type(input, 'mōtum');
       fireEvent.submit(input.closest('form'));
 
-      expect(setGameOver).not.toHaveBeenCalled();
-      expect(setGameOutcome).not.toHaveBeenCalled();
-    });
-  });
-
-  describe('Integration with Game Logic', () => {
-    it('calls checkGuess with normalized guess and answer', async () => {
-      const user = userEvent.setup();
-      checkGuess.mockReturnValue([
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-      ]);
-
-      render(<GuessInput {...defaultProps} answer="TERRA" />);
-
-      const input = screen.getByRole('textbox');
-      await user.type(input, 'hello');
-      fireEvent.submit(input.closest('form'));
-
-      expect(checkGuess).toHaveBeenCalledWith('HELLO', 'TERRA');
-    });
-
-    it('handles different answer words correctly', async () => {
-      const user = userEvent.setup();
-      checkGuess.mockReturnValue([
-        { status: 'correct' },
-        { status: 'correct' },
-        { status: 'correct' },
-        { status: 'correct' },
-        { status: 'correct' },
-      ]);
-
-      render(<GuessInput {...defaultProps} answer="AQUA" />);
-
-      const input = screen.getByRole('textbox');
-      await user.type(input, 'aqua');
-      fireEvent.submit(input.closest('form'));
-
-      expect(checkGuess).toHaveBeenCalledWith('AQUA', 'AQUA');
+      expect(onGuessSubmit).toHaveBeenCalledWith('MOTUM');
     });
   });
 
@@ -351,25 +206,16 @@ describe('GuessInput', () => {
       }).not.toThrow();
     });
 
-    it('handles missing props gracefully', () => {
-      const minimalProps = {
-        answer: 'TERRA',
-        guesses: [],
-        gameOver: false,
-        setGameOutcome: jest.fn(),
-        setGameOver: jest.fn(),
-        setGuesses: jest.fn(),
-      };
-
+    it('handles missing onGuessSubmit gracefully', () => {
       expect(() => {
-        render(<GuessInput {...minimalProps} />);
+        render(<GuessInput gameOver={false} />);
       }).not.toThrow();
     });
 
-    it('does not affect guess submission when input is disabled (form still works)', async () => {
+    it('does not affect guess submission when input is disabled', async () => {
       const user = userEvent.setup();
-      const setGuesses = jest.fn();
-      const { container } = render(<GuessInput {...defaultProps} gameOver={true} setGuesses={setGuesses} />);
+      const onGuessSubmit = jest.fn();
+      const { container } = render(<GuessInput {...defaultProps} gameOver={true} onGuessSubmit={onGuessSubmit} />);
 
       const input = screen.getByRole('textbox');
       const form = container.querySelector('form');
@@ -384,21 +230,21 @@ describe('GuessInput', () => {
       // Form submission still works but with empty value
       fireEvent.submit(form);
 
-      // setGuesses should be called with normalized empty string
-      expect(setGuesses).toHaveBeenCalledWith(['']);
+      // onGuessSubmit should be called with normalized empty string
+      expect(onGuessSubmit).toHaveBeenCalledWith('');
     });
   });
 
   describe('State Management', () => {
-    it('maintains input state independently of parent state', async () => {
+    it('maintains input state independently of parent re-renders', async () => {
       const user = userEvent.setup();
-      const { rerender } = render(<GuessInput {...defaultProps} guesses={[]} />);
+      const { rerender } = render(<GuessInput {...defaultProps} />);
 
       const input = screen.getByRole('textbox');
       await user.type(input, 'test');
 
-      // Re-render with updated guesses from parent
-      rerender(<GuessInput {...defaultProps} guesses={['PREV']} />);
+      // Re-render with same props
+      rerender(<GuessInput {...defaultProps} />);
 
       // Input should still maintain its local state
       expect(input).toHaveValue('test');
@@ -406,15 +252,9 @@ describe('GuessInput', () => {
 
     it('resets input value after form submission', async () => {
       const user = userEvent.setup();
-      checkGuess.mockReturnValue([
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-        { status: 'incorrect' },
-      ]);
+      const onGuessSubmit = jest.fn();
 
-      render(<GuessInput {...defaultProps} />);
+      render(<GuessInput {...defaultProps} onGuessSubmit={onGuessSubmit} />);
 
       const input = screen.getByRole('textbox');
       await user.type(input, 'hello');
