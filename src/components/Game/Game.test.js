@@ -361,9 +361,6 @@ describe('Game', () => {
     it('maintains proper component hierarchy', () => {
       render(<Game />);
 
-      const guessResults = screen.getByTestId('guess-results');
-      const guessInput = screen.getByTestId('guess-input');
-
       // GuessResults should come before GuessInput in DOM order
       const allElements = screen.getAllByTestId(/guess-/);
       const resultsIndex = allElements.findIndex(el => el.getAttribute('data-testid') === 'guess-results');

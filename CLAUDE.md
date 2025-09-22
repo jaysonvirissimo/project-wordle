@@ -55,14 +55,17 @@ App
     ├── Banner (win/lose messages with reset)
     ├── GuessResults (6-row grid display)
     │   └── Guess components (5-cell letter display)
-    └── GuessInput (user input with hint button)
+    ├── GuessInput (user input collection)
+    └── HintSection (hint button and display)
 ```
 
 ### Key Technical Patterns
 
 **State Management:**
 - Game component uses multiple `useState` hooks for different state aspects
-- Props flow down, callbacks flow up for state updates
+- Props flow down, callbacks flow up for state updates (following Fowler's refactoring principles)
+- GuessInput uses callback pattern (`onGuessSubmit`) for clean separation of concerns
+- HintSection encapsulates all hint-related state and behavior
 - No external state management library - pure React state
 
 **Word Data Structure:**
@@ -79,10 +82,11 @@ App
 ```
 
 **Testing Strategy:**
-- Comprehensive test coverage (170+ tests) across all components
+- Comprehensive test coverage (186 tests) across all components
 - Child components mocked in integration tests to isolate behavior
 - Edge cases and error conditions extensively tested
 - Test files co-located with components (Component.test.js)
+- Refactored components maintain 100% test coverage
 
 **Styling Approach:**
 - CSS classes with semantic naming (.wrapper, .game-wrapper, .guess-results)
@@ -127,7 +131,14 @@ Each component folder contains:
 - Win condition: all letters correct
 - Lose condition: 6 guesses without winning
 - Hint system shows meaning and part of speech on demand
+- Win/lose detection centralized in Game component (following Single Responsibility Principle)
 
 **Testing Requirements:**
-Always run the full test suite (`npm test`) before making changes to ensure no regressions in the 170+ existing tests covering all component behaviors, edge cases, and integration points.
-- Use comments sparingly and use Martin Fowler's advice from his Refactoring book as a default.
+Always run the full test suite (`npm test`) before making changes to ensure no regressions in the 186 existing tests covering all component behaviors, edge cases, and integration points.
+
+**Development Philosophy:**
+- Use comments sparingly and use Martin Fowler's advice from his Refactoring book as a default
+- Follow Single Responsibility Principle - each component has one clear purpose
+- Use callback patterns for clean unidirectional data flow
+- Extract components when functionality becomes cohesive enough to stand alone
+- Centralize related logic (e.g., game state management in Game component)
