@@ -395,7 +395,7 @@ describe('Game', () => {
 
       expect(container).toHaveStyle({
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-end',
         gap: '10px',
         justifyContent: 'center',
         marginBottom: '10px'

@@ -32,7 +32,7 @@ function Game() {
     <Banner answer={answer} gameOutcome={gameOutcome} gameOver={gameOver} guesses={guesses} resetGame={resetGame} wordData={wordInfo.data}></Banner>
     <GuessResults answer={answer} guesses={guesses}></GuessResults>
 
-    <div style={{display: 'flex', alignItems: 'center', gap: '10px', justifyContent: 'center', marginBottom: '10px'}}>
+    <div style={{display: 'flex', alignItems: 'flex-end', gap: '10px', justifyContent: 'center', marginBottom: '10px'}}>
       <GuessInput answer={answer} gameOver={gameOver} guesses={guesses} setGameOutcome={setGameOutcome} setGameOver={setGameOver} setGuesses={setGuesses}></GuessInput>
       {!gameOver && (
         <button onClick={toggleHint} style={{padding: '8px 12px', cursor: 'pointer'}}>
