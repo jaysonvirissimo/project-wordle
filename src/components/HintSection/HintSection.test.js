@@ -9,9 +9,9 @@ describe('HintSection', () => {
     onToggleHint: jest.fn(),
     wordData: {
       meaning: 'earth, land',
-      part: 'noun'
+      part: 'noun',
     },
-    gameOver: false
+    gameOver: false,
   };
 
   beforeEach(() => {
@@ -20,7 +20,9 @@ describe('HintSection', () => {
 
   describe('Visibility Logic', () => {
     it('renders nothing when game is over', () => {
-      const { container } = render(<HintSection {...defaultProps} gameOver={true} />);
+      const { container } = render(
+        <HintSection {...defaultProps} gameOver={true} />
+      );
 
       expect(container.firstChild).toBeNull();
     });
@@ -62,7 +64,7 @@ describe('HintSection', () => {
       const button = screen.getByRole('button');
       expect(button).toHaveStyle({
         padding: '8px 12px',
-        cursor: 'pointer'
+        cursor: 'pointer',
       });
     });
   });
@@ -84,7 +86,9 @@ describe('HintSection', () => {
 
     it('displays correct hint content', () => {
       const wordData = { meaning: 'fire, flame', part: 'noun' };
-      render(<HintSection {...defaultProps} showHint={true} wordData={wordData} />);
+      render(
+        <HintSection {...defaultProps} showHint={true} wordData={wordData} />
+      );
 
       expect(screen.getByText('fire, flame (noun)')).toBeInTheDocument();
     });
@@ -98,7 +102,7 @@ describe('HintSection', () => {
         margin: '10px 0',
         padding: '10px',
         backgroundColor: '#f0f0f0',
-        borderRadius: '5px'
+        borderRadius: '5px',
       });
     });
   });
@@ -106,35 +110,45 @@ describe('HintSection', () => {
   describe('Word Data Integration', () => {
     it('handles different parts of speech', () => {
       const wordData = { meaning: 'to love', part: 'verb' };
-      render(<HintSection {...defaultProps} showHint={true} wordData={wordData} />);
+      render(
+        <HintSection {...defaultProps} showHint={true} wordData={wordData} />
+      );
 
       expect(screen.getByText('to love (verb)')).toBeInTheDocument();
     });
 
     it('handles empty meaning', () => {
       const wordData = { meaning: '', part: 'noun' };
-      render(<HintSection {...defaultProps} showHint={true} wordData={wordData} />);
+      render(
+        <HintSection {...defaultProps} showHint={true} wordData={wordData} />
+      );
 
       expect(screen.getByText('(noun)')).toBeInTheDocument();
     });
 
     it('handles empty part', () => {
       const wordData = { meaning: 'test meaning', part: '' };
-      render(<HintSection {...defaultProps} showHint={true} wordData={wordData} />);
+      render(
+        <HintSection {...defaultProps} showHint={true} wordData={wordData} />
+      );
 
       expect(screen.getByText('test meaning ()')).toBeInTheDocument();
     });
 
     it('handles missing wordData gracefully', () => {
       expect(() => {
-        render(<HintSection {...defaultProps} showHint={true} wordData={null} />);
+        render(
+          <HintSection {...defaultProps} showHint={true} wordData={null} />
+        );
       }).toThrow(); // Should throw since we access wordData.meaning
     });
   });
 
   describe('State Changes', () => {
     it('updates button text when showHint prop changes', () => {
-      const { rerender } = render(<HintSection {...defaultProps} showHint={false} />);
+      const { rerender } = render(
+        <HintSection {...defaultProps} showHint={false} />
+      );
 
       expect(screen.getByText('Show Hint')).toBeInTheDocument();
 
@@ -144,7 +158,9 @@ describe('HintSection', () => {
     });
 
     it('updates hint visibility when showHint prop changes', () => {
-      const { rerender } = render(<HintSection {...defaultProps} showHint={false} />);
+      const { rerender } = render(
+        <HintSection {...defaultProps} showHint={false} />
+      );
 
       expect(screen.queryByText('Hint:')).not.toBeInTheDocument();
 
@@ -155,12 +171,24 @@ describe('HintSection', () => {
 
     it('updates hint content when wordData prop changes', () => {
       const initialWordData = { meaning: 'initial', part: 'noun' };
-      const { rerender } = render(<HintSection {...defaultProps} showHint={true} wordData={initialWordData} />);
+      const { rerender } = render(
+        <HintSection
+          {...defaultProps}
+          showHint={true}
+          wordData={initialWordData}
+        />
+      );
 
       expect(screen.getByText('initial (noun)')).toBeInTheDocument();
 
       const updatedWordData = { meaning: 'updated', part: 'verb' };
-      rerender(<HintSection {...defaultProps} showHint={true} wordData={updatedWordData} />);
+      rerender(
+        <HintSection
+          {...defaultProps}
+          showHint={true}
+          wordData={updatedWordData}
+        />
+      );
 
       expect(screen.queryByText('initial (noun)')).not.toBeInTheDocument();
       expect(screen.getByText('updated (verb)')).toBeInTheDocument();

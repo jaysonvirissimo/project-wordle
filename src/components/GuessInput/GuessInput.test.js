@@ -10,7 +10,12 @@ jest.mock('../../game-helpers', () => ({
 }));
 
 jest.mock('../../utils/normalize', () => ({
-  normalizeDiacritics: jest.fn((text) => text.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')),
+  normalizeDiacritics: jest.fn(text =>
+    text
+      .toUpperCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+  ),
 }));
 
 const { checkGuess } = require('../../game-helpers');
@@ -129,7 +134,10 @@ describe('GuessInput', () => {
       const form = input.closest('form');
 
       // Create a mock event that tracks preventDefault calls
-      const mockEvent = new Event('submit', { bubbles: true, cancelable: true });
+      const mockEvent = new Event('submit', {
+        bubbles: true,
+        cancelable: true,
+      });
       const preventDefaultSpy = jest.spyOn(mockEvent, 'preventDefault');
 
       fireEvent(form, mockEvent);
@@ -164,9 +172,7 @@ describe('GuessInput', () => {
 
       expect(onGuessSubmit).toHaveBeenCalledWith('HELLO');
     });
-
   });
-
 
   describe('Callback Integration', () => {
     it('calls onGuessSubmit with normalized guess', async () => {
@@ -215,7 +221,13 @@ describe('GuessInput', () => {
     it('does not affect guess submission when input is disabled', async () => {
       const user = userEvent.setup();
       const onGuessSubmit = jest.fn();
-      const { container } = render(<GuessInput {...defaultProps} gameOver={true} onGuessSubmit={onGuessSubmit} />);
+      const { container } = render(
+        <GuessInput
+          {...defaultProps}
+          gameOver={true}
+          onGuessSubmit={onGuessSubmit}
+        />
+      );
 
       const input = screen.getByRole('textbox');
       const form = container.querySelector('form');

@@ -77,7 +77,9 @@ describe('App', () => {
       const header = screen.getByTestId('header');
       const game = screen.getByTestId('game');
 
-      const allElements = Array.from(document.querySelectorAll('[data-testid]'));
+      const allElements = Array.from(
+        document.querySelectorAll('[data-testid]')
+      );
       const headerIndex = allElements.indexOf(header);
       const gameIndex = allElements.indexOf(game);
 

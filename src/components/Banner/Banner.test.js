@@ -12,8 +12,8 @@ describe('Banner', () => {
     resetGame: jest.fn(),
     wordData: {
       meaning: 'earth, land',
-      part: 'noun'
-    }
+      part: 'noun',
+    },
   };
 
   beforeEach(() => {
@@ -22,7 +22,9 @@ describe('Banner', () => {
 
   describe('Visibility Logic', () => {
     it('renders nothing when game is not over', () => {
-      const { container } = render(<Banner {...defaultProps} gameOver={false} />);
+      const { container } = render(
+        <Banner {...defaultProps} gameOver={false} />
+      );
 
       expect(container.firstChild).toBeNull();
     });
@@ -30,7 +32,9 @@ describe('Banner', () => {
     it('renders banner when game is over', () => {
       render(<Banner {...defaultProps} gameOver={true} />);
 
-      const banner = screen.getByRole('button', { name: /reset game/i }).closest('.banner');
+      const banner = screen
+        .getByRole('button', { name: /reset game/i })
+        .closest('.banner');
       expect(banner).toBeInTheDocument();
     });
   });
@@ -39,12 +43,16 @@ describe('Banner', () => {
     it('renders win banner with correct styling', () => {
       render(<Banner {...defaultProps} gameOutcome="win" />);
 
-      const banner = screen.getByRole('button', { name: /reset game/i }).closest('.banner');
+      const banner = screen
+        .getByRole('button', { name: /reset game/i })
+        .closest('.banner');
       expect(banner).toHaveClass('happy', 'banner');
     });
 
     it('displays congratulations message with guess count', () => {
-      render(<Banner {...defaultProps} gameOutcome="win" guesses={['ONE', 'TWO']} />);
+      render(
+        <Banner {...defaultProps} gameOutcome="win" guesses={['ONE', 'TWO']} />
+      );
 
       expect(screen.getByText('Congratulations!')).toBeInTheDocument();
       expect(screen.getByText(/got it in/i)).toBeInTheDocument();
@@ -53,7 +61,14 @@ describe('Banner', () => {
 
     it('displays word meaning when wordData is provided', () => {
       const wordData = { meaning: 'water', part: 'noun' };
-      render(<Banner {...defaultProps} gameOutcome="win" answer="AQUA" wordData={wordData} />);
+      render(
+        <Banner
+          {...defaultProps}
+          gameOutcome="win"
+          answer="AQUA"
+          wordData={wordData}
+        />
+      );
 
       expect(screen.getByText('AQUA')).toBeInTheDocument();
       expect(screen.getByText(/means "water"/)).toBeInTheDocument();
@@ -67,19 +82,29 @@ describe('Banner', () => {
     });
 
     it('does not display word meaning when wordData is undefined', () => {
-      render(<Banner {...defaultProps} gameOutcome="win" wordData={undefined} />);
+      render(
+        <Banner {...defaultProps} gameOutcome="win" wordData={undefined} />
+      );
 
       expect(screen.queryByText(/means/)).not.toBeInTheDocument();
     });
 
     it('handles singular guess correctly', () => {
-      render(<Banner {...defaultProps} gameOutcome="win" guesses={['TERRA']} />);
+      render(
+        <Banner {...defaultProps} gameOutcome="win" guesses={['TERRA']} />
+      );
 
       expect(screen.getByText(/1 guesses/i)).toBeInTheDocument();
     });
 
     it('handles multiple guesses correctly', () => {
-      render(<Banner {...defaultProps} gameOutcome="win" guesses={['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE']} />);
+      render(
+        <Banner
+          {...defaultProps}
+          gameOutcome="win"
+          guesses={['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE']}
+        />
+      );
 
       expect(screen.getByText(/5 guesses/i)).toBeInTheDocument();
     });
@@ -89,20 +114,31 @@ describe('Banner', () => {
     it('renders lose banner with correct styling', () => {
       render(<Banner {...defaultProps} gameOutcome="lose" />);
 
-      const banner = screen.getByRole('button', { name: /reset game/i }).closest('.banner');
+      const banner = screen
+        .getByRole('button', { name: /reset game/i })
+        .closest('.banner');
       expect(banner).toHaveClass('sad', 'banner');
     });
 
     it('displays sorry message with correct answer', () => {
       render(<Banner {...defaultProps} gameOutcome="lose" answer="MOTUM" />);
 
-      expect(screen.getByText(/sorry, the correct answer is/i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/sorry, the correct answer is/i)
+      ).toBeInTheDocument();
       expect(screen.getByText('MOTUM')).toBeInTheDocument();
     });
 
     it('displays word meaning when wordData is provided', () => {
       const wordData = { meaning: 'movement, motion', part: 'noun' };
-      render(<Banner {...defaultProps} gameOutcome="lose" answer="MOTUM" wordData={wordData} />);
+      render(
+        <Banner
+          {...defaultProps}
+          gameOutcome="lose"
+          answer="MOTUM"
+          wordData={wordData}
+        />
+      );
 
       expect(screen.getByText(/means "movement, motion"/)).toBeInTheDocument();
       expect(screen.getByText(/\(noun\)/)).toBeInTheDocument();
@@ -115,7 +151,9 @@ describe('Banner', () => {
     });
 
     it('does not display word meaning when wordData is undefined', () => {
-      render(<Banner {...defaultProps} gameOutcome="lose" wordData={undefined} />);
+      render(
+        <Banner {...defaultProps} gameOutcome="lose" wordData={undefined} />
+      );
 
       expect(screen.queryByText(/means/)).not.toBeInTheDocument();
     });
@@ -138,7 +176,9 @@ describe('Banner', () => {
 
     it('calls resetGame when clicked in win banner', () => {
       const resetGame = jest.fn();
-      render(<Banner {...defaultProps} gameOutcome="win" resetGame={resetGame} />);
+      render(
+        <Banner {...defaultProps} gameOutcome="win" resetGame={resetGame} />
+      );
 
       const resetButton = screen.getByRole('button', { name: /reset game/i });
       fireEvent.click(resetButton);
@@ -148,7 +188,9 @@ describe('Banner', () => {
 
     it('calls resetGame when clicked in lose banner', () => {
       const resetGame = jest.fn();
-      render(<Banner {...defaultProps} gameOutcome="lose" resetGame={resetGame} />);
+      render(
+        <Banner {...defaultProps} gameOutcome="lose" resetGame={resetGame} />
+      );
 
       const resetButton = screen.getByRole('button', { name: /reset game/i });
       fireEvent.click(resetButton);
@@ -163,7 +205,7 @@ describe('Banner', () => {
       expect(resetButton).toHaveStyle({
         marginLeft: '10px',
         padding: '4px 8px',
-        cursor: 'pointer'
+        cursor: 'pointer',
       });
     });
   });
@@ -208,7 +250,14 @@ describe('Banner', () => {
   describe('Word Data Integration', () => {
     it('displays complete word information in win banner', () => {
       const wordData = { meaning: 'fire, flame', part: 'noun' };
-      render(<Banner {...defaultProps} gameOutcome="win" answer="IGNIS" wordData={wordData} />);
+      render(
+        <Banner
+          {...defaultProps}
+          gameOutcome="win"
+          answer="IGNIS"
+          wordData={wordData}
+        />
+      );
 
       expect(screen.getByText('IGNIS')).toBeInTheDocument();
       expect(screen.getByText(/means "fire, flame"/)).toBeInTheDocument();
@@ -217,7 +266,14 @@ describe('Banner', () => {
 
     it('displays complete word information in lose banner', () => {
       const wordData = { meaning: 'love, affection', part: 'noun' };
-      render(<Banner {...defaultProps} gameOutcome="lose" answer="AMOR" wordData={wordData} />);
+      render(
+        <Banner
+          {...defaultProps}
+          gameOutcome="lose"
+          answer="AMOR"
+          wordData={wordData}
+        />
+      );
 
       expect(screen.getByText('AMOR')).toBeInTheDocument();
       expect(screen.getByText(/means "love, affection"/)).toBeInTheDocument();
@@ -226,14 +282,18 @@ describe('Banner', () => {
 
     it('handles wordData with different parts of speech', () => {
       const wordData = { meaning: 'to be', part: 'verb' };
-      render(<Banner {...defaultProps} gameOutcome="win" wordData={wordData} />);
+      render(
+        <Banner {...defaultProps} gameOutcome="win" wordData={wordData} />
+      );
 
       expect(screen.getByText(/\(verb\)/)).toBeInTheDocument();
     });
 
     it('handles wordData with empty meaning', () => {
       const wordData = { meaning: '', part: 'noun' };
-      render(<Banner {...defaultProps} gameOutcome="win" wordData={wordData} />);
+      render(
+        <Banner {...defaultProps} gameOutcome="win" wordData={wordData} />
+      );
 
       expect(screen.getByText(/means ""/)).toBeInTheDocument();
       expect(screen.getByText(/\(noun\)/)).toBeInTheDocument();
@@ -241,7 +301,9 @@ describe('Banner', () => {
 
     it('handles wordData with empty part', () => {
       const wordData = { meaning: 'test meaning', part: '' };
-      render(<Banner {...defaultProps} gameOutcome="win" wordData={wordData} />);
+      render(
+        <Banner {...defaultProps} gameOutcome="win" wordData={wordData} />
+      );
 
       expect(screen.getByText(/means "test meaning"/)).toBeInTheDocument();
       expect(screen.getByText(/\(\)/)).toBeInTheDocument();
@@ -262,7 +324,9 @@ describe('Banner', () => {
     });
 
     it('handles missing answer prop', () => {
-      render(<Banner {...defaultProps} answer={undefined} gameOutcome="lose" />);
+      render(
+        <Banner {...defaultProps} answer={undefined} gameOutcome="lose" />
+      );
 
       // Should still render but without answer text
       expect(screen.getByText(/sorry/i)).toBeInTheDocument();
@@ -276,14 +340,18 @@ describe('Banner', () => {
 
     it('handles undefined guesses array', () => {
       expect(() => {
-        render(<Banner {...defaultProps} gameOutcome="win" guesses={undefined} />);
+        render(
+          <Banner {...defaultProps} gameOutcome="win" guesses={undefined} />
+        );
       }).toThrow(); // guesses.length will fail
     });
   });
 
   describe('Component Structure', () => {
     it('renders as a div with correct classes for win', () => {
-      const { container } = render(<Banner {...defaultProps} gameOutcome="win" />);
+      const { container } = render(
+        <Banner {...defaultProps} gameOutcome="win" />
+      );
 
       const banner = container.querySelector('.happy.banner');
       expect(banner).toBeInTheDocument();
@@ -291,7 +359,9 @@ describe('Banner', () => {
     });
 
     it('renders as a div with correct classes for lose', () => {
-      const { container } = render(<Banner {...defaultProps} gameOutcome="lose" />);
+      const { container } = render(
+        <Banner {...defaultProps} gameOutcome="lose" />
+      );
 
       const banner = container.querySelector('.sad.banner');
       expect(banner).toBeInTheDocument();
@@ -301,31 +371,41 @@ describe('Banner', () => {
     it('contains proper paragraph structure in win banner', () => {
       render(<Banner {...defaultProps} gameOutcome="win" />);
 
-      const paragraphs = screen.getAllByText((content, element) => element?.tagName === 'P');
+      const paragraphs = screen.getAllByText(
+        (content, element) => element?.tagName === 'P'
+      );
       expect(paragraphs.length).toBeGreaterThan(0);
     });
 
     it('contains proper paragraph structure in lose banner', () => {
       render(<Banner {...defaultProps} gameOutcome="lose" />);
 
-      const paragraphs = screen.getAllByText((content, element) => element?.tagName === 'P');
+      const paragraphs = screen.getAllByText(
+        (content, element) => element?.tagName === 'P'
+      );
       expect(paragraphs.length).toBeGreaterThan(0);
     });
   });
 
   describe('State Management', () => {
     it('updates when gameOver prop changes', () => {
-      const { rerender } = render(<Banner {...defaultProps} gameOver={false} />);
+      const { rerender } = render(
+        <Banner {...defaultProps} gameOver={false} />
+      );
 
       expect(screen.queryByRole('button')).not.toBeInTheDocument();
 
       rerender(<Banner {...defaultProps} gameOver={true} />);
 
-      expect(screen.getByRole('button', { name: /reset game/i })).toBeInTheDocument();
+      expect(
+        screen.getByRole('button', { name: /reset game/i })
+      ).toBeInTheDocument();
     });
 
     it('updates when gameOutcome prop changes', () => {
-      const { rerender } = render(<Banner {...defaultProps} gameOutcome="win" />);
+      const { rerender } = render(
+        <Banner {...defaultProps} gameOutcome="win" />
+      );
 
       expect(screen.getByText('Congratulations!')).toBeInTheDocument();
 
@@ -337,7 +417,9 @@ describe('Banner', () => {
 
     it('updates when wordData prop changes', () => {
       const initialWordData = { meaning: 'initial', part: 'noun' };
-      const { rerender } = render(<Banner {...defaultProps} wordData={initialWordData} />);
+      const { rerender } = render(
+        <Banner {...defaultProps} wordData={initialWordData} />
+      );
 
       expect(screen.getByText(/means "initial"/)).toBeInTheDocument();
 

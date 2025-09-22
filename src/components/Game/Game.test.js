@@ -39,21 +39,35 @@ jest.mock('../GuessResults/GuessResults', () => {
 });
 
 jest.mock('../Banner/Banner', () => {
-  return function MockBanner({ answer, gameOutcome, gameOver, guesses, resetGame, wordData }) {
+  return function MockBanner({
+    answer,
+    gameOutcome,
+    gameOver,
+    guesses,
+    resetGame,
+    wordData,
+  }) {
     if (!gameOver) return null;
     return (
       <div data-testid="banner">
         <div>Game Over: {gameOutcome}</div>
         <div>Answer: {answer}</div>
         {wordData && <div>Meaning: {wordData.meaning}</div>}
-        <button data-testid="reset-button" onClick={resetGame}>Reset</button>
+        <button data-testid="reset-button" onClick={resetGame}>
+          Reset
+        </button>
       </div>
     );
   };
 });
 
 jest.mock('../HintSection/HintSection', () => {
-  return function MockHintSection({ showHint, onToggleHint, wordData, gameOver }) {
+  return function MockHintSection({
+    showHint,
+    onToggleHint,
+    wordData,
+    gameOver,
+  }) {
     if (gameOver) return null;
     return (
       <>
@@ -76,9 +90,9 @@ jest.mock('../../utils', () => ({
     word: 'TERRA',
     data: {
       meaning: 'earth, land',
-      part: 'noun'
-    }
-  }))
+      part: 'noun',
+    },
+  })),
 }));
 
 jest.mock('../../words.json', () => [
@@ -86,16 +100,16 @@ jest.mock('../../words.json', () => [
     word: 'TERRA',
     data: {
       meaning: 'earth, land',
-      part: 'noun'
-    }
+      part: 'noun',
+    },
   },
   {
     word: 'AQUA',
     data: {
       meaning: 'water',
-      part: 'noun'
-    }
-  }
+      part: 'noun',
+    },
+  },
 ]);
 
 const { sampleWord } = require('../../utils');
@@ -108,8 +122,8 @@ describe('Game', () => {
       word: 'TERRA',
       data: {
         meaning: 'earth, land',
-        part: 'noun'
-      }
+        part: 'noun',
+      },
     });
   });
 
@@ -218,7 +232,6 @@ describe('Game', () => {
 
       expect(screen.queryByTestId('hint-display')).not.toBeInTheDocument();
     });
-
   });
 
   describe('Game State Management', () => {
@@ -281,8 +294,8 @@ describe('Game', () => {
         word: 'AQUA',
         data: {
           meaning: 'water',
-          part: 'noun'
-        }
+          part: 'noun',
+        },
       });
 
       // Reset the game
@@ -363,8 +376,12 @@ describe('Game', () => {
 
       // GuessResults should come before GuessInput in DOM order
       const allElements = screen.getAllByTestId(/guess-/);
-      const resultsIndex = allElements.findIndex(el => el.getAttribute('data-testid') === 'guess-results');
-      const inputIndex = allElements.findIndex(el => el.getAttribute('data-testid') === 'guess-input');
+      const resultsIndex = allElements.findIndex(
+        el => el.getAttribute('data-testid') === 'guess-results'
+      );
+      const inputIndex = allElements.findIndex(
+        el => el.getAttribute('data-testid') === 'guess-input'
+      );
 
       expect(resultsIndex).toBeLessThan(inputIndex);
     });
@@ -382,7 +399,7 @@ describe('Game', () => {
         alignItems: 'flex-end',
         gap: '10px',
         justifyContent: 'center',
-        marginBottom: '10px'
+        marginBottom: '10px',
       });
     });
 
@@ -393,7 +410,9 @@ describe('Game', () => {
       const elements = Array.from(container.querySelectorAll('[data-testid]'));
 
       const order = elements.map(el => el.getAttribute('data-testid'));
-      expect(order.indexOf('guess-results')).toBeLessThan(order.indexOf('guess-input'));
+      expect(order.indexOf('guess-results')).toBeLessThan(
+        order.indexOf('guess-input')
+      );
     });
   });
 
@@ -403,8 +422,8 @@ describe('Game', () => {
         word: 'MOTUM',
         data: {
           meaning: 'movement, motion',
-          part: 'noun'
-        }
+          part: 'noun',
+        },
       };
       sampleWord.mockReturnValue(mockWordInfo);
 
@@ -418,8 +437,8 @@ describe('Game', () => {
         word: 'IGNIS',
         data: {
           meaning: 'fire, flame',
-          part: 'noun'
-        }
+          part: 'noun',
+        },
       };
       sampleWord.mockReturnValue(mockWordInfo);
 
@@ -436,8 +455,8 @@ describe('Game', () => {
         word: 'AMARE',
         data: {
           meaning: 'to love',
-          part: 'verb'
-        }
+          part: 'verb',
+        },
       };
       sampleWord.mockReturnValue(mockWordInfo);
 
@@ -454,7 +473,7 @@ describe('Game', () => {
     it('handles missing word data gracefully', () => {
       sampleWord.mockReturnValue({
         word: 'TERRA',
-        data: null
+        data: null,
       });
 
       expect(() => {
@@ -470,8 +489,8 @@ describe('Game', () => {
         word: 'TERRA',
         data: {
           meaning: '',
-          part: 'noun'
-        }
+          part: 'noun',
+        },
       });
 
       render(<Game />);
@@ -487,8 +506,8 @@ describe('Game', () => {
         word: 'TERRA',
         data: {
           meaning: 'earth, land',
-          part: ''
-        }
+          part: '',
+        },
       });
 
       render(<Game />);

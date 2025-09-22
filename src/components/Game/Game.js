@@ -33,28 +33,55 @@ function Game() {
 
   function handleGuessSubmit(normalizedGuess) {
     const newGuesses = [...guesses, normalizedGuess];
-    const correctGuess = checkGuess(normalizedGuess, answer).every((result) => result.status === "correct");
+    const correctGuess = checkGuess(normalizedGuess, answer).every(
+      result => result.status === 'correct'
+    );
 
     if (correctGuess) {
       setGameOver(true);
-      setGameOutcome("win");
+      setGameOutcome('win');
     } else if (newGuesses.length >= NUM_OF_GUESSES_ALLOWED) {
       setGameOver(true);
-      setGameOutcome("lose");
+      setGameOutcome('lose');
     }
 
     setGuesses(newGuesses);
   }
 
-  return (<>
-    <Banner answer={answer} gameOutcome={gameOutcome} gameOver={gameOver} guesses={guesses} resetGame={resetGame} wordData={wordInfo.data}></Banner>
-    <GuessResults answer={answer} guesses={guesses}></GuessResults>
+  return (
+    <>
+      <Banner
+        answer={answer}
+        gameOutcome={gameOutcome}
+        gameOver={gameOver}
+        guesses={guesses}
+        resetGame={resetGame}
+        wordData={wordInfo.data}
+      ></Banner>
+      <GuessResults answer={answer} guesses={guesses}></GuessResults>
 
-    <div style={{display: 'flex', alignItems: 'flex-end', gap: '10px', justifyContent: 'center', marginBottom: '10px'}}>
-      <GuessInput gameOver={gameOver} onGuessSubmit={handleGuessSubmit}></GuessInput>
-      <HintSection showHint={showHint} onToggleHint={toggleHint} wordData={wordInfo.data} gameOver={gameOver}></HintSection>
-    </div>
-  </>);
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'flex-end',
+          gap: '10px',
+          justifyContent: 'center',
+          marginBottom: '10px',
+        }}
+      >
+        <GuessInput
+          gameOver={gameOver}
+          onGuessSubmit={handleGuessSubmit}
+        ></GuessInput>
+        <HintSection
+          showHint={showHint}
+          onToggleHint={toggleHint}
+          wordData={wordInfo.data}
+          gameOver={gameOver}
+        ></HintSection>
+      </div>
+    </>
+  );
 }
 
 export default Game;

@@ -26,7 +26,7 @@ jest.mock('../../constants', () => ({
 describe('GuessResults', () => {
   const defaultProps = {
     guesses: [],
-    answer: 'TERRA'
+    answer: 'TERRA',
   };
 
   describe('Component Structure', () => {
@@ -47,17 +47,26 @@ describe('GuessResults', () => {
 
   describe('Grid Structure', () => {
     it('always renders exactly 6 guess components regardless of guesses count', () => {
-      const { rerender } = render(<GuessResults {...defaultProps} guesses={[]} />);
+      const { rerender } = render(
+        <GuessResults {...defaultProps} guesses={[]} />
+      );
 
       expect(screen.getAllByTestId('guess-component')).toHaveLength(6);
 
       rerender(<GuessResults {...defaultProps} guesses={['HELLO']} />);
       expect(screen.getAllByTestId('guess-component')).toHaveLength(6);
 
-      rerender(<GuessResults {...defaultProps} guesses={['HELLO', 'WORLD', 'TESTS']} />);
+      rerender(
+        <GuessResults {...defaultProps} guesses={['HELLO', 'WORLD', 'TESTS']} />
+      );
       expect(screen.getAllByTestId('guess-component')).toHaveLength(6);
 
-      rerender(<GuessResults {...defaultProps} guesses={['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIXTH']} />);
+      rerender(
+        <GuessResults
+          {...defaultProps}
+          guesses={['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIXTH']}
+        />
+      );
       expect(screen.getAllByTestId('guess-component')).toHaveLength(6);
     });
 
@@ -94,7 +103,9 @@ describe('GuessResults', () => {
   describe('Guess Rendering', () => {
     it('renders each guess with correct props', () => {
       const testGuesses = ['HELLO', 'WORLD', 'TESTS'];
-      render(<GuessResults {...defaultProps} guesses={testGuesses} answer="TERRA" />);
+      render(
+        <GuessResults {...defaultProps} guesses={testGuesses} answer="TERRA" />
+      );
 
       const guessComponents = screen.getAllByTestId('guess-component');
 
@@ -107,7 +118,9 @@ describe('GuessResults', () => {
     });
 
     it('passes answer prop to filled guess components only', () => {
-      render(<GuessResults {...defaultProps} guesses={['HELLO']} answer="TESTS" />);
+      render(
+        <GuessResults {...defaultProps} guesses={['HELLO']} answer="TESTS" />
+      );
 
       const guessComponents = screen.getAllByTestId('guess-component');
 
@@ -144,7 +157,15 @@ describe('GuessResults', () => {
     });
 
     it('handles more than maximum guesses gracefully', () => {
-      const tooManyGuesses = ['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN'];
+      const tooManyGuesses = [
+        'ONE',
+        'TWO',
+        'THREE',
+        'FOUR',
+        'FIVE',
+        'SIX',
+        'SEVEN',
+      ];
       render(<GuessResults {...defaultProps} guesses={tooManyGuesses} />);
 
       const guessComponents = screen.getAllByTestId('guess-component');
@@ -155,7 +176,9 @@ describe('GuessResults', () => {
 
   describe('Integration with Guess Component', () => {
     it('passes correct props to Guess components for filled slots', () => {
-      render(<GuessResults {...defaultProps} guesses={['HELLO']} answer="WORLD" />);
+      render(
+        <GuessResults {...defaultProps} guesses={['HELLO']} answer="WORLD" />
+      );
 
       const guessComponents = screen.getAllByTestId('guess-component');
       const filledGuess = guessComponents[0];
@@ -186,7 +209,9 @@ describe('GuessResults', () => {
 
   describe('State Changes', () => {
     it('updates when guesses prop changes', () => {
-      const { rerender } = render(<GuessResults {...defaultProps} guesses={['HELLO']} />);
+      const { rerender } = render(
+        <GuessResults {...defaultProps} guesses={['HELLO']} />
+      );
 
       let guessComponents = screen.getAllByTestId('guess-component');
       expect(guessComponents[0]).toHaveAttribute('data-guess', 'HELLO');
@@ -201,13 +226,17 @@ describe('GuessResults', () => {
     });
 
     it('updates when answer prop changes', () => {
-      const { rerender } = render(<GuessResults {...defaultProps} guesses={['HELLO']} answer="FIRST" />);
+      const { rerender } = render(
+        <GuessResults {...defaultProps} guesses={['HELLO']} answer="FIRST" />
+      );
 
       let guessComponents = screen.getAllByTestId('guess-component');
       // Only the first component (with guess) should have answer
       expect(guessComponents[0]).toHaveAttribute('data-answer', 'FIRST');
 
-      rerender(<GuessResults {...defaultProps} guesses={['HELLO']} answer="SECOND" />);
+      rerender(
+        <GuessResults {...defaultProps} guesses={['HELLO']} answer="SECOND" />
+      );
 
       guessComponents = screen.getAllByTestId('guess-component');
       // Only the first component (with guess) should have updated answer
@@ -215,13 +244,17 @@ describe('GuessResults', () => {
     });
 
     it('handles dynamic guess additions correctly', () => {
-      const { rerender } = render(<GuessResults {...defaultProps} guesses={[]} />);
+      const { rerender } = render(
+        <GuessResults {...defaultProps} guesses={[]} />
+      );
 
       // Start with empty
       let guessComponents = screen.getAllByTestId('guess-component');
-      expect(guessComponents.every(component =>
-        component.getAttribute('data-guess') === 'empty'
-      )).toBe(true);
+      expect(
+        guessComponents.every(
+          component => component.getAttribute('data-guess') === 'empty'
+        )
+      ).toBe(true);
 
       // Add first guess
       rerender(<GuessResults {...defaultProps} guesses={['FIRST']} />);
@@ -229,7 +262,9 @@ describe('GuessResults', () => {
       expect(guessComponents[0]).toHaveAttribute('data-guess', 'FIRST');
 
       // Add second guess
-      rerender(<GuessResults {...defaultProps} guesses={['FIRST', 'SECOND']} />);
+      rerender(
+        <GuessResults {...defaultProps} guesses={['FIRST', 'SECOND']} />
+      );
       guessComponents = screen.getAllByTestId('guess-component');
       expect(guessComponents[0]).toHaveAttribute('data-guess', 'FIRST');
       expect(guessComponents[1]).toHaveAttribute('data-guess', 'SECOND');
@@ -257,7 +292,9 @@ describe('GuessResults', () => {
 
     it('handles empty string guesses (causes React key warnings)', () => {
       // Suppress console warnings for this specific test that tests problematic behavior
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
 
       render(<GuessResults {...defaultProps} guesses={['', 'HELLO', '']} />);
 
@@ -292,7 +329,9 @@ describe('GuessResults', () => {
       const duplicateGuesses = ['HELLO', 'HELLO']; // This will cause React key warnings
 
       // Suppress console warnings for this specific test that tests problematic behavior
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
 
       // We can't easily test React keys directly, but we can test the behavior
       // In real usage, this would cause React warnings about duplicate keys
@@ -306,20 +345,26 @@ describe('GuessResults', () => {
     });
 
     it('maintains component structure when re-rendering', () => {
-      const { rerender } = render(<GuessResults {...defaultProps} guesses={['HELLO']} />);
+      const { rerender } = render(
+        <GuessResults {...defaultProps} guesses={['HELLO']} />
+      );
 
-      const initialContainer = screen.getAllByTestId('guess-component')[0].parentElement;
+      const initialContainer =
+        screen.getAllByTestId('guess-component')[0].parentElement;
 
       rerender(<GuessResults {...defaultProps} guesses={['HELLO', 'WORLD']} />);
 
-      const updatedContainer = screen.getAllByTestId('guess-component')[0].parentElement;
+      const updatedContainer =
+        screen.getAllByTestId('guess-component')[0].parentElement;
       expect(initialContainer).toBe(updatedContainer);
     });
   });
 
   describe('Accessibility and Structure', () => {
     it('maintains proper DOM structure', () => {
-      const { container } = render(<GuessResults {...defaultProps} guesses={['HELLO']} />);
+      const { container } = render(
+        <GuessResults {...defaultProps} guesses={['HELLO']} />
+      );
 
       const guessResults = container.querySelector('.guess-results');
       const guessComponents = guessResults.children;
@@ -333,7 +378,8 @@ describe('GuessResults', () => {
     it('preserves semantic structure for screen readers', () => {
       render(<GuessResults {...defaultProps} guesses={['HELLO', 'WORLD']} />);
 
-      const container = screen.getAllByTestId('guess-component')[0].parentElement;
+      const container =
+        screen.getAllByTestId('guess-component')[0].parentElement;
       expect(container).toHaveClass('guess-results');
     });
   });
